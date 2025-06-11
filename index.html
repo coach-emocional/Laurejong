@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,7 +14,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar" id="navbar">
+    <!-- <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#inicio" class="nav-logo-link" aria-label="Ir al inicio" title="Ir al inicio">
                 <div class="nav-logo">
@@ -30,15 +29,69 @@
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
         </div>
-    </nav>
+    </nav> -->
+    <!-- MODIFICAR EL NAVBAR EXISTENTE -->
+<!-- Reemplaza tu <nav class="navbar"> con esta versión: -->
+
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="#inicio" class="nav-logo-link" aria-label="Ir al inicio" title="Ir al inicio">
+            <div class="nav-logo">
+                <img src="assets/img/logo-transparente.png" alt="Laure Jong Logo">
+            </div>
+        </a>
+        
+        <!-- Menú desktop (existente) -->
+        <ul class="nav-menu">
+            <li><a href="#coaching" class="nav-link">Coaching</a></li>
+            <li><a href="#beneficios" class="nav-link">Beneficios</a></li>
+            <li><a href="#intervenciones" class="nav-link">Intervenciones</a></li>
+            <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
+            <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+
+        <!-- Botón hamburguesa (NUEVO) -->
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <!-- Menú móvil (NUEVO) -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <a href="#coaching" class="mobile-link">
+                    <span class="mobile-icon">🎯</span>
+                    <span>Coaching</span>
+                </a>
+                <a href="#beneficios" class="mobile-link">
+                    <span class="mobile-icon">✨</span>
+                    <span>Beneficios</span>
+                </a>
+                <a href="#intervenciones" class="mobile-link">
+                    <span class="mobile-icon">🔄</span>
+                    <span>Intervenciones</span>
+                </a>
+                <a href="#testimonios" class="mobile-link">
+                    <span class="mobile-icon">💬</span>
+                    <span>Testimonios</span>
+                </a>
+                <a href="#contacto" class="mobile-link">
+                    <span class="mobile-icon">📞</span>
+                    <span>Contacto</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="hero-main">
             <div class="hero-content">
                 <div class="hero-subtitle">Interventora Estratégica Emocional • Coach • Inteligencia Consciente</div>
-                <h1 class="hero-title">Transforma tu vida con<br><span class="highlight">Claridad, Energía y Confianza</span></h1>
-                <div class="hero-name">LAURE JONGEJANS</div>
+                <h1 class="hero-title">Transforma tu vida con<br><span class="highlight gradient-text">Claridad, Energía y Confianza</span></h1>
+                <div class="hero-name gradient-text">LAURE JONGEJANS</div>
                 <p class="hero-description">
                     Te acompaño desde el corazón, el respeto y la empatía en tu proceso de transformación y crecimiento interior para que recuperes el rumbo de tu vida.
                 </p>
@@ -54,72 +107,124 @@
         </div>
         
         <!-- Navigation Tabs al final de la sección hero -->
-        <div class="hero-tabs">
-            <div class="hero-tab active" data-tab="coaching">
-                <span>Coaching</span>
-            </div>
-            <div class="hero-tab" data-tab="intervenciones">
-                <span>Intervenciones Emocionales De Alto Impacto</span>
-            </div>
-        </div>
+       <div class="hero-tabs">
+    <div class="hero-tab active" data-tab="coaching">
+        <span>Sesión de Claridad GRATUITA - Coaching</span>
+    </div>
+    <div class="hero-tab" data-tab="intervenciones">
+        <span>Sesión de Claridad GRATUITA - Intervención Emocional de Alto Impacto</span>
+    </div>
+</div>
     </section>
 
     <!-- Coaching Section -->
-    <section id="coaching" class="coaching">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-icon">♥</div>
-                <h2 class="section-title">Coaching</h2>
-                <p class="section-description">
-                    Sesiones de acompañamiento transformador para reconectar con tu esencia, tomar decisiones desde tu sabiduría interior y vivir con propósito.
-                </p>
-            </div>
-            
-            <div class="coaching-grid">
-                <div class="coaching-card">
-                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Coaching Holístico">
-                    <h3>Coaching holístico</h3>
-                    <button class="btn-primary">Click Here</button>
-                </div>
-                
-                <div class="coaching-card">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Coaching Profesional">
-                    <h3>Coaching profesional</h3>
-                    <button class="btn-primary">Click Here</button>
-                </div>
-                
-                <div class="coaching-card">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Coaching para Emprendedoras">
-                    <h3>Coaching para emprendedoras</h3>
-                    <button class="btn-primary">Click Here</button>
-                </div>
-            </div>
+<section id="coaching" class="coaching">
+    <div class="section-container">
+        <div class="section-header">
+            <h2 class="gradient-text section-title">Coaching</h2>
+            <p class="section-description">
+                Sesiones de acompañamiento transformador para reconectar con tu esencia, tomar decisiones desde tu sabiduría interior y vivir con propósito.
+            </p>
         </div>
-    </section>
-
-    <!-- Why Choose Me Section -->
-    <section id="beneficios" class="why-choose">
-        <div class="section-container">
-            <div class="why-content">
-                <div class="why-text">
-                    <h2 class="section-title">Beneficios de trabajar conmigo</h2>
-                    <div class="why-buttons">
-                        <button class="btn-outline">🌱 Liberación profunda de bloqueos emocionales</button>
-                        <button class="btn-outline">✨ Claridad mental para tomar mejores decisiones</button>
-                        <button class="btn-outline">💪 Recuperación de tu poder interior y confianza</button>
-                        <button class="btn-outline">🎯 Enfoque estratégico personalizado a tus necesidades</button>
-                        <button class="btn-outline">🧠 Herramientas de inteligencia emocional consciente</button>
-                        <button class="btn-outline">🚀 Transformación acelerada con resultados duraderos</button>
+        
+        <div class="coaching-grid">
+            <!-- Card 1: Coaching Holístico -->
+            <div class="coaching-card" data-instagram-url="https://www.instagram.com/laurejong/">
+                <div class="card-image-container">
+                     <img src="assets/img/coaching-holistico-gemini.jpeg" alt="Servicio Coaching Holístico">
+                   
+                    <div class="video-overlay">
+                        <button class="play-button">▶</button>
+                    </div>
+                    <div class="instagram-badge">
+                        Instagram
                     </div>
                 </div>
-                <div class="why-image">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Laure Jong" style="border-radius: 20px; max-width: 100%;">
+                <div class="card-content">
+                    <h3>Coaching Holístico</h3>
+                    <p class="card-description">
+                        Integra cuerpo, mente y espíritu para una transformación completa. Reconecta con tu sabiduría interior y encuentra el equilibrio perfecto en todas las áreas de tu vida.
+                    </p>
+                </div>
+            </div>
+        
+            <div class="coaching-card" data-instagram-url="https://www.instagram.com/laurejong/">
+                <div class="card-image-container">
+                         <img src="assets/img/liderazgo-personal-midjourney.jpg" alt="Servicio Coaching de Liderazgo Personal">
+                    <div class="video-overlay">
+                        <button class="play-button">▶</button>
+                    </div>
+                    <div class="instagram-badge">
+                        Instagram
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Coaching de Liderazgo Personal</h3>
+                    <p class="card-description">
+                        Desarrolla tu liderazgo auténtico y alcanza tus metas profesionales. Supera bloqueos limitantes y toma decisiones estratégicas con total confianza.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="coaching-card" data-instagram-url="https://www.instagram.com/laurejong/">
+                <div class="card-image-container">
+                      <img src="assets/img/coaching-proposito-midjourney.jpg" alt="Servicio Coaching de Propósito y Visión">
+                    <div class="video-overlay">
+                        <button class="play-button">▶</button>
+                    </div>
+                    <div class="instagram-badge">
+                        Instagram
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Coaching de Propósito y Visión</h3>
+                    <p class="card-description">
+                        Materializa tu visión empresarial desde la claridad emocional. Gestiona miedos, desarrolla resiliencia y construye un negocio alineado con tu verdadero propósito.
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Interventions Section -->
+ <section id="beneficios" class="benefits-section">
+  <div class="benefits-container">
+    <h2 class="section-title">¿Por qué acudir a mí?</h2>
+
+    <div class="benefits-layout">
+      <div class="benefits-left">
+        <div class="benefit-card animate delay-1">
+          <h3 class="benefit-title">Recuperas tu Poder Personal</h3>
+          <p class="benefit-description">Vuelves a sentirte libre de vivir tu propia vida y tomar las riendas de tu destino con total autonomía.</p>
+        </div>
+        <div class="benefit-card animate delay-2">
+          <h3 class="benefit-title">Claridad y Enfoque</h3>
+          <p class="benefit-description">Obtienes claridad mental para tomar mejores decisiones y enfocar tu energía de manera eficiente hacia tus objetivos.</p>
+        </div>
+        <div class="benefit-card animate delay-3">
+          <h3 class="benefit-title">Transformación Acelerada</h3>
+          <p class="benefit-description">Experimentas resultados profundos y duraderos en tiempo récord, adquiriendo herramientas para toda la vida.</p>
+        </div>
+      </div>
+
+      <div class="benefits-right">
+        <div class="benefit-card animate delay-2">
+          <h3 class="benefit-title">Confianza y Empoderamiento</h3>
+          <p class="benefit-description">Desarrollas una confianza auténtica y recuperas tu energía vital y fuerza creativa interior.</p>
+        </div>
+        <div class="benefit-card animate delay-3">
+          <h3 class="benefit-title">Inteligencia Emocional</h3>
+          <p class="benefit-description">Mejoras significativamente tu gestión emocional y elevas la calidad de todas tus relaciones.</p>
+        </div>
+        <div class="benefit-card animate delay-4">
+          <h3 class="benefit-title">Liberación de Bloqueos</h3>
+          <p class="benefit-description">Superas patrones limitantes arraigados y liberas todo tu potencial único para expresarlo en el mundo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
     <section id="intervenciones" class="interventions">
         <div class="section-container">
             <div class="section-header">
@@ -130,154 +235,921 @@
             </div>
             
             <div class="interventions-grid">
-                <div class="intervention-card">
-                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Liberación del sufrimiento emocional">
-                    <h3>Liberación del sufrimiento emocional</h3>
-                    <button class="btn-primary">Click Here</button>
+                <!-- Card 1: Liberación del sufrimiento emocional -->
+                <div class="intervention-card" data-instagram-url="https://www.instagram.com/laurejong/">
+                    <div class="card-image-container">
+                        <img src="./assets/img/liberacion-sufrimiento.jpeg" alt="Liberación del sufrimiento emocional">
+                        <div class="video-overlay">
+                            <button class="play-button">▶</button>
+                        </div>
+                        <div class="instagram-badge">
+                            Instagram
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Liberación del sufrimiento emocional</h3>
+                        <p class="card-description">
+                            Procesos de sanación profunda para liberar traumas, miedos y patrones que te mantienen atrapada en el dolor. Recupera tu paz interior y vuelve a sentir la ligereza de ser.
+                        </p>
+                    </div>
                 </div>
                 
-                <div class="intervention-card">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Reconexión con la vocación profesional">
-                    <h3>Reconexión con la vocación profesional</h3>
-                    <button class="btn-primary">Click Here</button>
+                <!-- Card 2: Reconexión con la vocación profesional -->
+                <div class="intervention-card" data-instagram-url="https://www.instagram.com/laurejong/">
+                    <div class="card-image-container">
+                        <img src="./assets/img/reconexion.jpeg" alt="Reconexión con la vocación profesional">
+                        <div class="video-overlay">
+                            <button class="play-button">▶</button>
+                        </div>
+                        <div class="instagram-badge">
+                            Instagram
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Reconexión con la vocación profesional</h3>
+                        <p class="card-description">
+                            Redescubre tu propósito profesional auténtico y alinea tu carrera con tu verdadera esencia. Supera la desconexión laboral y encuentra tu camino de realización.
+                        </p>
+                    </div>
                 </div>
                 
-                <div class="intervention-card">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Transiciones vitales sagradas">
-                    <h3>Transiciones vitales sagradas</h3>
-                    <button class="btn-primary">Click Here</button>
+                <!-- Card 3: Transiciones vitales sagradas -->
+                <div class="intervention-card" data-instagram-url="https://www.instagram.com/laurejong/">
+                    <div class="card-image-container">
+                        <img src="./assets/img/transiciones-vitales.jpeg" alt="Transiciones vitales sagradas">
+                        <div class="video-overlay">
+                            <button class="play-button">▶</button>
+                        </div>
+                        <div class="instagram-badge">
+                            Instagram
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Transiciones vitales sagradas</h3>
+                        <p class="card-description">
+                            Acompañamiento especializado en momentos de cambio profundo: separaciones, pérdidas, renacimientos. Transforma la crisis en oportunidad de crecimiento.
+                        </p>
+                    </div>
                 </div>
                 
-                <div class="intervention-card">
-                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Resignificación para emprendedoras">
-                    <h3>Resignificación para emprendedoras</h3>
-                    <button class="btn-primary">Click Here</button>
+                <!-- Card 4: Resignificación para emprendedoras -->
+                <div class="intervention-card" data-instagram-url="https://www.instagram.com/laurejong/">
+                    <div class="card-image-container">
+                        <img src="./assets/img/resignificacion.jpeg" alt="Resignificación para emprendedoras">
+                        <div class="video-overlay">
+                            <button class="play-button">▶</button>
+                        </div>
+                        <div class="instagram-badge">
+                            Instagram
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Resignificación para emprendedoras</h3>
+                        <p class="card-description">
+                            Transforma bloqueos en impulso creativo. Libera miedos al éxito, patrones de auto-sabotaje y conecta con tu poder emprendedor auténtico.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-      <section id="testimonios" class="testimonials">
+  
+    <section id="testimonios" class="testimonials">
         <div class="section-container">
             <div class="section-header">
-                <h2 class="section-title">Testimonios</h2>
+                <h2 class="section-title">Qué dicen mis clientes...</h2>
+                <p class="section-description">Experiencias reales de transformación</p>
             </div>
-            <div style="text-align: center; padding: 3rem 0;">
-                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Testimonios" style="border-radius: 20px; max-width: 100%;">
+
+            <div class="testimonials-carousel">
+                <!-- Testimonio 1: Vero (Coaching) -->
+                <div class="testimonial-slide active" data-type="coaching">
+                    <div class="testimonial-card">
+                        <div class="service-badge coaching">Coaching</div>
+                        
+                        <div class="author-avatar">
+                            <img src="./assets/img/testimonials/vero.jpeg" alt="Vero">
+                            
+                        </div>
+                        
+                        <div class="testimonial-content">
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <div class="author-name">Vero</div>
+                                    <div class="author-role">Abogada</div>
+                                </div>
+                            </div>
+                            
+                            <div class="testimonial-scrollable">
+                                <p class="testimonial-text">
+                                    "Laure ha aparecido en un momento muy difícil de mi vida, me encontraba desanimada, bloqueada para avanzar y tomar decisiones. Me ha ayudado a identificar mis objetivos y mi potencial, y a trabajar en ello con grandes resultados. Ha puesto muchas herramientas a mi disposición que hoy en día utilizo. <br />
+He hecho con ella tanto coaching como intervención estratégica. Realmente tiene cualidades excepcionales y ha estado acompañándome activamente en todo mi proceso. Es muy profesional y comprometida con su trabajo, además de tener un don especial. Voy a estar por siempre agradecida. La recomiendo 100%."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2: Maddalen (Intervención) -->
+                <div class="testimonial-slide" data-type="intervencion">
+                    <div class="testimonial-card">
+                        <div class="service-badge intervencion">Intervención</div>
+                        
+                        <div class="author-avatar">
+                            <img src="assets/img/testimonials/Maddalen.jpeg" alt="Maddalen">
+                        
+                        </div>
+                        
+                        <div class="testimonial-content">
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <div class="author-name">Maddalen</div>
+                                    <div class="author-role">Diseñadora</div>
+                                </div>
+                            </div>
+                            
+                            <div class="testimonial-scrollable">
+                                <p class="testimonial-text">
+                                    "La intervención emocional me ha aportado luz sobre aspectos de mi identidad y mi comportamiento. Me ha ayudado a identificar y a entender los diferentes ‘’yo's" que existen en mí y a establecer una comunicación sana conmigo misma, respetando mis deseos y necesidades.<br />
+Me he sentido acompañada por Laure en todo momento, de manera delicada y firme.<br />
+Laure es una persona muy empática y sensible, que identifica y entiende tus necesidades. Con ella te sientes en un espacio de confianza, donde fácilmente fluyen tus emociones. Ella se encarga de recibir y ordenar lo que una siente, quiere, sufre… y te lo devuelve de manera que lo puedas identificar e interiorizar.<br />
+Al fin y al cabo, Laure te transmite confianza y fuerza para indagar en aquello que te preocupa. Ella te ayuda a identificarlo, a entenderlo y a trabajarlo desde un lugar más cariñoso y amable."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3: Laetitia (Coaching) -->
+                <div class="testimonial-slide" data-type="coaching">
+                    <div class="testimonial-card">
+                        <div class="service-badge coaching">Coaching</div>
+                        
+                        <div class="author-avatar">
+                            <img src="assets/img/testimonials/Laetitia.jpeg" alt="Laetitia">
+                            
+                        </div>
+                        
+                        <div class="testimonial-content">
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <div class="author-name">Laetitia</div>
+                                    <div class="author-role">Asistente social</div>
+                                </div>
+                            </div>
+                            
+                            <div class="testimonial-scrollable">
+                                <p class="testimonial-text">
+                                    "El coaching con Laure me ha devuelto la confianza en mí misma y me ha permitido avanzar paso a paso en mis proyectos. He hecho cambios importantes en mi vida personal, profesional y familiar. <br />
+Ahora sé cómo dedicarme tiempo a mí misma, cómo volver a centrarme en mis prioridades y cómo aprovechar al máximo las cosas positivas que ocurren en mi día a día. He desarrollado una conciencia de mis pensamientos y emociones, y de sus consecuencias para mis acciones en la vida. <br />
+Durante todo el proceso de coaching me sentí apoyada gracias a su atención, amabilidad y capacidad para llevarme a cuestionarme y a desarrollar algunos hábitos aplicables a mi día a día. Los objetivos fijados en cada sesión me animaron a esforzarme y desafiarme sin miedo a ser juzgada.<br />
+Esta experiencia con Laure me ha marcado y ha cambiado mi visión de la vida. Ha generado cambios duraderos en mi. Me siento liberada y dueña de mi propia vida. Ya no espero nada de los demás."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 4: Nelly (Intervención) -->
+                <div class="testimonial-slide" data-type="intervencion">
+                    <div class="testimonial-card">
+                        <div class="service-badge intervencion">Intervención</div>
+                        
+                        <div class="author-avatar">
+                            <!-- <img src="assets/img/testimonials/nelly.jpg" alt="Nelly"> -->
+                            N
+                        </div>
+                        
+                        <div class="testimonial-content">
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <div class="author-name">Nelly</div>
+                                    <div class="author-role">Programadora y Artista</div>
+                                </div>
+                            </div>
+                            
+                            <div class="testimonial-scrollable">
+                                <p class="testimonial-text">
+                                    "La conocí en unos momentos muy difíciles de mi vida. En aquella época estaba en un ambiente muy competitivo y negativo y he vuelto a experimentar las emociones de mi infancia, ya que pasé por malos tratos y violencia en mi infancia y juventud.<br />
+Laure era la única persona con quién he podido abrirme. Hablar de mis emociones y recibir empatía y un trato super profesional de su parte me dio esperanza. Eso fue en la primera sesión, hemos tenido dos sesiones en total. <br />
+En la segunda sesión con mucha profesionalidad me hizo viajar a mi infancia. Allí lo vi todo. Fue un viaje muy doloroso para mí, pero su empatía y profesionalidad me ayudaron a hacer paz con la niña maltratada que no me dejaba avanzar. <br />
+Fue una experiencia que me salvó. Y he cogido mucho cariño hacia Laure, es una gran persona y experta. <br />
+Desde que hicimos la sesión ha pasado mucho tiempo, y hasta hoy seguimos en contacto, es muy atenta, siempre está ahí para brindarme su apoyo profesional. Es una gran experta en su campo. <br />
+Adoro a Laure, ojalá que haya más personas como ella."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 5: Irina (Coaching) -->
+                <div class="testimonial-slide" data-type="coaching">
+                    <div class="testimonial-card">
+                        <div class="service-badge coaching">Coaching</div>
+                        
+                        <div class="author-avatar">
+                            <img src="assets/img/testimonials/Irina.jpg" alt="Irina">
+                            
+                        </div>
+                        
+                        <div class="testimonial-content">
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <div class="author-name">Irina</div>
+                                    <div class="author-role">Full-Stack Developer | Co-Fundadora en femCoders Club </div>
+                                </div>
+                            </div>
+                            
+                            <div class="testimonial-scrollable">
+                                <p class="testimonial-text">
+                                    "Quiero expresar mi profundo agradecimiento a Laure, mi coach extraordinaria.
+Su dedicación y enfoque integral han marcado una diferencia significativa en mi vida, tanto para alcanzar mis metas financieras, sino que también me ayudó a enfrentar y superar desafíos personales.
+Con su acompañamiento he crecido de una manera que nunca hubiera imaginado. Aprecio enormemente todo lo que ha hecho por mí.
+Laure es una profesional excepcional, con un enfoque holístico que me ha permitido no solo alcanzar mis objetivos, sino también crecer como persona. Su apoyo y orientación han sido invaluables en mi viaje hacia el éxito personal y profesional."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 6: Isabel (Intervención) -->
+                <div class="testimonial-slide" data-type="intervencion">
+                    <div class="testimonial-card">
+                        <div class="service-badge intervencion">Intervención</div>
+                        
+                        <div class="author-avatar">
+                            <!-- <img src="assets/img/testimonials/isabel.jpg" alt="Isabel"> -->
+                            I
+                        </div>
+                        
+                        <div class="testimonial-content">
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <div class="author-name">Isabel</div>
+                                    <div class="author-role">Responsable Administrativa</div>
+                                </div>
+                            </div>
+                            
+                            <div class="testimonial-scrollable">
+                                <p class="testimonial-text">
+                                    "Hace unos meses, por unos problemas familiares, estaba en un bucle del que no conseguía salir, y me sentía cada vez más perdida. Conocí a Laure como profesora de Yoga, y me enteré que hacía intervenciones emocionales. Estaba tan desesperada que pensé que sólo me haría bien que alguien me ayudara, y mucho más una experta. Así que, me puse en sus manos.
+Laure, desde el minuto uno, supo generar esa confianza para poder abrirme, me sentí segura y pude expresar mis pensamientos sin temor a qué iba a pensar de mí.
+Me dio las herramientas para explorar mis emociones en profundidad, transformar mis pensamientos negativos, y levantar mi autoestima. Y aunque no es fácil, ella me ha puesto en el camino y me da tranquilidad el saber que, si algún día la voy a necesitar, va a estar ahí para seguir dándome esas herramientas que me van a ayudar.
+"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Dots -->
+            <div class="testimonial-dots">
+                <button class="dot active" data-slide="0" aria-label="Testimonio 1"></button>
+                <button class="dot" data-slide="1" aria-label="Testimonio 2"></button>
+                <button class="dot" data-slide="2" aria-label="Testimonio 3"></button>
+                <button class="dot" data-slide="3" aria-label="Testimonio 4"></button>
+                <button class="dot" data-slide="4" aria-label="Testimonio 5"></button>
+                <button class="dot" data-slide="5" aria-label="Testimonio 6"></button>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="testimonial-controls">
+                <button class="control-btn prev-btn">‹</button>
+                <button class="control-btn pause-btn">⏸</button>
+                <button class="control-btn next-btn">›</button>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contacto" class="contact">
-        <div class="section-container">
-            <div class="section-header">
-                <h2 class="section-title">Contacto</h2>
-                <p class="section-description">
-                    ¿Lista para comenzar tu transformación? Completa el formulario y te contactaré para agendar una primera sesión gratuita.
-                </p>
+  <section id="contacto" class="contact">
+        <div class="contact-container">
+            <!-- Imagen de Laure -->
+            <div class="contact-image">
+                <!-- Aquí va la imagen real de Laure -->
+                <img src="./assets/img/contacto.jpg" alt="Laure Jong - Coach Emocional">
             </div>
-            
-            <div class="contact-content">
-                <div class="contact-image">
-                    <div class="image-overlay">
-                        <h3>Tu transformación comienza aquí</h3>
-                        <p>Sesiones online y presenciales diseñadas para tu crecimiento personal</p>
-                    </div>
+
+            <!-- Formulario sobrepuesto -->
+            <div class="contact-form">
+                <div class="form-header">
+                    <h3>Agenda tu consulta</h3>
+                    <p>Completa el formulario y te contactaré en las próximas 24 horas para agendar tu sesión gratuita.</p>
                 </div>
-                <form class="contact-form" id="contactForm" action="#" method="POST">
-                    <div class="form-header">
-                        <h3>Agenda tu sesión gratuita</h3>
-                        <p>Te contactaré en 24 horas</p>
-                    </div>
-                    <div class="form-row">
+
+                <form id="contactForm" action="https://formspree.io/f/TU_FORM_ID" method="POST">
+                    <div class="form-grid">
                         <div class="form-group">
-                            <label for="nombre">Nombre *</label>
-                            <input type="text" id="nombre" name="nombre" required minlength="2" aria-describedby="nombre-error" autocomplete="given-name">
-                            <span class="error-message" id="nombre-error" role="alert">Por favor ingresa al menos un nombre</span>
+                            <label for="nombre">Nombre y apellidos *</label>
+                            <input type="text" id="nombre" name="nombre" required minlength="2" 
+                                   placeholder="Tu nombre completo" autocomplete="name">
+                            <span class="error-message">Por favor ingresa tu nombre completo</span>
                         </div>
+
                         <div class="form-group">
-                            <label for="apellidos">Apellidos *</label>
-                            <input type="text" id="apellidos" name="apellidos" required minlength="2" aria-describedby="apellidos-error" autocomplete="family-name">
-                            <span class="error-message" id="apellidos-error" role="alert">Por favor ingresa al menos un apellido</span>
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono" required
+                                   placeholder="+34 600 000 000" autocomplete="tel">
+                            <span class="error-message">Por favor ingresa un teléfono válido</span>
                         </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
+
+                        <div class="form-group form-full-width">
                             <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required aria-describedby="email-error" autocomplete="email">
-                            <span class="error-message" id="email-error" role="alert">Por favor ingresa un email válido</span>
-                        </div>
-                        <div class="form-group">
-                            <label for="telefono">Teléfono</label>
-                            <input type="tel" id="telefono" name="telefono" autocomplete="tel">
-                            <span class="form-help">Opcional</span>
+                            <input type="email" id="email" name="email" required 
+                                   placeholder="tu@email.com" autocomplete="email">
+                            <span class="error-message">Por favor ingresa un email válido</span>
                         </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <fieldset>
-                            <legend>¿En qué horario te puedo llamar?</legend>
-                            <div class="radio-group" role="radiogroup" aria-labelledby="horario-legend">
-                                <label class="radio-label">
-                                    <input type="radio" name="horario" value="9-12" aria-describedby="horario-help">
-                                    <span class="radio-custom" aria-hidden="true"></span>
-                                    09:00-12:00
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="horario" value="12-15">
-                                    <span class="radio-custom" aria-hidden="true"></span>
-                                    12:00-15:00
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="horario" value="15-17">
-                                    <span class="radio-custom" aria-hidden="true"></span>
-                                    15:00-17:00
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="horario" value="17-21">
-                                    <span class="radio-custom" aria-hidden="true"></span>
-                                    17:00-21:00
-                                </label>
+
+                    <fieldset class="radio-section form-full-width">
+                        <legend>¿En qué horario te llamamos? *</legend>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="horario1" name="horario" value="09:00-12:00" required>
+                                <label for="horario1">09-12h</label>
                             </div>
-                            <span class="form-help" id="horario-help">Selecciona el horario que mejor te convenga</span>
-                        </fieldset>
+                            <div class="radio-option">
+                                <input type="radio" id="horario2" name="horario" value="12:00-15:00">
+                                <label for="horario2">12-15h</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="horario3" name="horario" value="15:00-17:00">
+                                <label for="horario3">15-17h</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="horario4" name="horario" value="17:00-21:00">
+                                <label for="horario4">17-21h</label>
+                            </div>
+                        </div>
+                        <span class="error-message">Por favor selecciona un horario</span>
+                    </fieldset>
+
+                    <div class="form-group form-full-width">
+                        <label for="mensaje">¿Cómo podemos ayudarte?</label>
+                        <textarea id="mensaje" name="mensaje" 
+                                  placeholder="Cuéntanos qué te gustaría trabajar..."></textarea>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="mensaje">¿Cómo puedo ayudarte?</label>
-                        <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cuéntame qué te gustaría trabajar o qué objetivos tienes..." aria-describedby="mensaje-help"></textarea>
-                        <span class="form-help" id="mensaje-help">Opcional: comparte lo que te motiva a buscar coaching</span>
+
+                    <!-- Campos ocultos para Formspree -->
+                    <input type="hidden" name="_subject" value="Nueva consulta - Laure Jong">
+                    <input type="hidden" name="_next" value="https://tu-sitio.com/gracias">
+
+                    <div class="checkbox-group form-full-width">
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="privacidad" name="privacidad" required>
+                            <label for="privacidad">
+                                He leído y acepto la 
+                                <a href="#politica" class="privacy-link" target="_blank">Política de Privacidad</a>
+                            </label>
+                        </div>
+                        <span class="error-message">Debes aceptar la política de privacidad</span>
                     </div>
-                    
-                    <div class="form-group checkbox-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" id="privacidad" name="privacidad" required aria-describedby="privacidad-error">
-                            <span class="checkmark" aria-hidden="true"></span>
-                            He leído y acepto la <a href="#politica" class="privacy-link" target="_blank" rel="noopener">Política de Privacidad</a>
-                        </label>
-                        <span class="error-message" id="privacidad-error" role="alert">Debes aceptar la política de privacidad</span>
-                    </div>
-                    
-                    <button type="submit" class="btn-submit" aria-describedby="submit-help">
-                        <span>Enviar solicitud</span>
-                        <div class="loading-spinner" aria-hidden="true"></div>
+
+                    <button type="submit" class="btn-submit">
+                        <span>Enviar</span>
+                        <div class="loading-spinner"></div>
                     </button>
-                    <span class="form-help" id="submit-help">Te responderé personalmente en menos de 24 horas</span>
                 </form>
+
+                <!-- Mensaje de éxito -->
+                <div class="success-message" id="successMessage">
+                    <h4>¡Mensaje enviado! ✨</h4>
+                    <p>Gracias por contactarme. Te responderé en las próximas 24 horas para agendar tu sesión gratuita.</p>
+                    <p>¡Tu transformación está a punto de comenzar!</p>
+                </div>
             </div>
         </div>
     </section>
-  
-
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-logo">
-            <img src="assets/img/logo-transparente.png" alt="Laure Jong Logo">
+  <footer class="footer">
+        <div class="footer-container">
+            <!-- Logo y descripción de Laure -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="assets/img/logo-transparente.png" alt="Laure Jong Logo">
+                </div>
+                <p class="footer-text">
+                    Interventora Estratégica Emocional especializada en transformación personal y coaching holístico.
+                </p>
+            </div>
+
+            <!-- Enlaces y redes sociales -->
+            <div class="footer-links">
+                <nav class="footer-nav">
+                    <a href="#coaching" class="footer-link">Coaching</a>
+                    <a href="#beneficios" class="footer-link">Beneficios</a>
+                    <a href="#intervenciones" class="footer-link">Intervenciones</a>
+                    <a href="#testimonios" class="footer-link">Testimonios</a>
+                    <a href="#contacto" class="footer-link">Contacto</a>
+                </nav>
+                
+                <nav class="footer-nav">
+                    <a href="#" class="footer-link" onclick="openModal('privacidad')">Política de Privacidad</a>
+                    <a href="#" class="footer-link" onclick="openModal('cookies')">Política de Cookies</a>
+                    <a href="#" class="footer-link" onclick="openModal('faq')">FAQ</a>
+                </nav>
+
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/laurejong/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                        📱
+                    </a>
+                    <a href="mailto:info@laurejong.com" class="social-link" aria-label="Email">
+                        ✉️
+                    </a>
+                    <a href="https://linkedin.com/in/laurejong" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        💼
+                    </a>
+                </div>
+            </div>
+
+            <!-- Crédito desarrolladora -->
+            <div class="footer-credit">
+                <p class="credit-text">Desarrollo web por</p>
+                <svg class="irina-dev-logo" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo de IrinaDev con símbolo de Géminis y decoraciones estelares">
+                    <title>IrinaDev - Full Stack Developer</title>
+                    <defs>
+                        <linearGradient id="geminiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#9d4edd" />
+                            <stop offset="50%" stop-color="#c77dff" />
+                            <stop offset="100%" stop-color="#de43ba" />
+                        </linearGradient>
+                        <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#374151" />
+                            <stop offset="100%" stop-color="#64748b" />
+                        </linearGradient>
+                        <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur stdDeviation="2" result="blur" />
+                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                        </filter>
+                        <filter id="starGlow" x="-100%" y="-100%" width="300%" height="300%">
+                            <feGaussianBlur stdDeviation="1" result="blur" />
+                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                        </filter>
+                    </defs>
+                    <g transform="translate(60, 60)" filter="url(#softGlow)">
+                        <path d="M0,-40 C22,-40 40,-22 40,0 C40,22 22,40 0,40 C-22,40 -40,22 -40,0 C-40,-22 -22,-40 0,-40 Z M0,-20 C-11,-20 -20,-11 -20,0 C-20,11 -11,20 0,20 C11,20 20,11 20,0 C20,-11 11,-20 0,-20 Z" 
+                              fill="url(#geminiGradient)" opacity="0.92" />
+                        <path d="M-44,5 L-38,0 L-44,-5 M-34,5 L-40,0 L-34,-5" 
+                              stroke="#ffffff" stroke-width="0.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+                        <path d="M20,-25 L26,-30 L20,-35 M30,-25 L24,-30 L30,-35" 
+                              stroke="#ffffff" stroke-width="0.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+                        <circle cx="-30" cy="-15" r="1.2" fill="#ffffff" filter="url(#starGlow)" opacity="0.95">
+                            <animateTransform attributeName="transform" type="scale" values="1;1.2;1" dur="3s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="30" cy="15" r="1.2" fill="#ffffff" filter="url(#starGlow)" opacity="0.95">
+                            <animateTransform attributeName="transform" type="scale" values="1;1.15;1" dur="2.5s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="15" cy="-30" r="1.2" fill="#ffffff" filter="url(#starGlow)" opacity="0.95">
+                            <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="2s" repeatCount="indefinite" />
+                        </circle>
+                    </g>
+                    <g transform="translate(150, 60)">
+                        <text x="0" y="5" 
+                              font-family="'Playfair Display', serif" 
+                              font-size="36" 
+                              font-weight="500" 
+                              text-anchor="middle" 
+                              fill="#ffffff" 
+                              letter-spacing="0.5">
+                            Irina<tspan font-weight="700" fill="#de43ba">Dev</tspan>
+                        </text>
+                        <path d="M-80,15 L80,15" stroke="url(#geminiGradient)" stroke-width="0.8" opacity="0.75" stroke-linecap="round" />
+                    </g>
+                </svg>
+            </div>
         </div>
-        <p>&copy; 2024 Laure Jong. Todos los derechos reservados.</p>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Laure Jong. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
+    <!-- MODALES -->
+
+    <!-- Modal Política de Privacidad -->
+    <div id="privacidadModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Política de Privacidad</h2>
+                <button class="close-btn" onclick="closeModal('privacidad')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Última actualización:</strong> Diciembre 2024</p>
+
+                <h3>1. Información que recopilamos</h3>
+                <p>Recopilamos la siguiente información cuando te pones en contacto con nosotros:</p>
+                <ul>
+                    <li><strong>Datos de contacto:</strong> Nombre, apellidos, email y teléfono</li>
+                    <li><strong>Preferencias:</strong> Horario de contacto preferido</li>
+                    <li><strong>Información adicional:</strong> Mensaje o consulta que nos envíes</li>
+                </ul>
+
+                <h3>2. Cómo utilizamos tu información</h3>
+                <p>Utilizamos tu información personal para:</p>
+                <ul>
+                    <li>Responder a tus consultas y agendar sesiones</li>
+                    <li>Proporcionarte información sobre nuestros servicios</li>
+                    <li>Mejorar nuestros servicios y experiencia del usuario</li>
+                    <li>Cumplir con obligaciones legales</li>
+                </ul>
+
+                <h3>3. Base legal para el tratamiento</h3>
+                <p>Tratamos tus datos personales basándonos en:</p>
+                <ul>
+                    <li><strong>Consentimiento:</strong> Cuando nos das tu consentimiento explícito</li>
+                    <li><strong>Interés legítimo:</strong> Para responder a tus consultas y mejorar nuestros servicios</li>
+                    <li><strong>Ejecución contractual:</strong> Para prestarte los servicios solicitados</li>
+                </ul>
+
+                <h3>4. Compartir información</h3>
+                <p>No vendemos, alquilamos ni compartimos tu información personal con terceros, excepto:</p>
+                <ul>
+                    <li>Cuando sea necesario para prestar el servicio solicitado</li>
+                    <li>Para cumplir con obligaciones legales</li>
+                    <li>Con tu consentimiento explícito</li>
+                </ul>
+
+                <h3>5. Tus derechos</h3>
+                <p>Según el RGPD, tienes derecho a:</p>
+                <ul>
+                    <li><strong>Acceso:</strong> Conocer qué datos personales tenemos sobre ti</li>
+                    <li><strong>Rectificación:</strong> Corregir datos inexactos o incompletos</li>
+                    <li><strong>Supresión:</strong> Solicitar la eliminación de tus datos</li>
+                    <li><strong>Portabilidad:</strong> Recibir tus datos en formato estructurado</li>
+                    <li><strong>Oposición:</strong> Oponerte al tratamiento de tus datos</li>
+                    <li><strong>Limitación:</strong> Solicitar la limitación del tratamiento</li>
+                </ul>
+
+                <h3>6. Seguridad</h3>
+                <p>Implementamos medidas de seguridad técnicas y organizativas apropiadas para proteger tu información personal contra acceso no autorizado, alteración, divulgación o destrucción.</p>
+
+                <h3>7. Retención de datos</h3>
+                <p>Conservamos tu información personal solo durante el tiempo necesario para cumplir con los fines para los que fue recopilada, o según lo exijan las obligaciones legales.</p>
+
+                <h3>8. Contacto</h3>
+                <p>Para ejercer tus derechos o si tienes preguntas sobre esta política, contacta con nosotros en:</p>
+                <p><strong>Email:</strong> info@laurejong.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Política de Cookies -->
+    <div id="cookiesModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Política de Cookies</h2>
+                <button class="close-btn" onclick="closeModal('cookies')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Última actualización:</strong> Diciembre 2024</p>
+
+                <h3>¿Qué son las cookies?</h3>
+                <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas un sitio web. Nos ayudan a mejorar tu experiencia de navegación y a analizar cómo utilizas nuestro sitio.</p>
+
+                <h3>Tipos de cookies que utilizamos</h3>
+
+                <h4>Cookies estrictamente necesarias</h4>
+                <p>Estas cookies son esenciales para el funcionamiento de nuestro sitio web y no se pueden desactivar:</p>
+                <ul>
+                    <li>Cookies de sesión para el formulario de contacto</li>
+                    <li>Cookies de seguridad para proteger contra ataques</li>
+                </ul>
+
+                <h4>Cookies de funcionalidad</h4>
+                <p>Nos permiten recordar tus preferencias y mejorar tu experiencia:</p>
+                <ul>
+                    <li>Preferencias de idioma</li>
+                    <li>Configuración de accesibilidad</li>
+                </ul>
+
+                <h4>Cookies analíticas (si están habilitadas)</h4>
+                <p>Nos ayudan a entender cómo los visitantes interactúan con nuestro sitio:</p>
+                <ul>
+                    <li>Google Analytics (si está configurado)</li>
+                    <li>Estadísticas de uso del sitio</li>
+                </ul>
+
+                <h3>Gestión de cookies</h3>
+                <p>Puedes controlar las cookies a través de:</p>
+                <ul>
+                    <li><strong>Configuración del navegador:</strong> La mayoría de navegadores te permiten ver, gestionar y eliminar cookies</li>
+                    <li><strong>Herramientas de terceros:</strong> Para cookies de analítica específicas</li>
+                </ul>
+
+                <h3>Cookies de terceros</h3>
+                <p>Algunas cookies pueden ser establecidas por servicios de terceros que utilizamos:</p>
+                <ul>
+                    <li><strong>Formspree:</strong> Para el procesamiento de formularios</li>
+                    <li><strong>Fuentes web:</strong> Google Fonts para tipografías</li>
+                </ul>
+
+                <h3>Más información</h3>
+                <p>Para más información sobre cookies y cómo gestionarlas, visita <a href="https://www.aboutcookies.org" target="_blank" rel="noopener">aboutcookies.org</a></p>
+
+                <p>Si tienes preguntas sobre nuestra política de cookies, contacta con nosotros en: <strong>info@laurejong.com</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal FAQ -->
+    <div id="faqModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Preguntas Frecuentes (FAQ)</h2>
+                <button class="close-btn" onclick="closeModal('faq')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h3>¿Qué es una Interventora Estratégica Emocional?</h3>
+                <p>Una Interventora Estratégica Emocional es una profesional especializada en procesos de transformación personal profunda. Utilizo técnicas específicas para ayudarte a liberar bloqueos emocionales, superar patrones limitantes y reconectar con tu verdadero potencial.</p>
+
+                <h3>¿Cuál es la diferencia entre coaching e intervención emocional?</h3>
+                <p>El <strong>coaching</strong> se enfoca en el logro de objetivos específicos y el desarrollo de habilidades. Las <strong>intervenciones emocionales</strong> van más profundo, trabajando con traumas, bloqueos inconscientes y patrones emocionales arraigados para crear cambios fundamentales.</p>
+
+                <h3>¿Cómo son las sesiones?</h3>
+                <p>Ofrezco sesiones tanto <strong>presenciales</strong> como <strong>online</strong>. Cada sesión dura entre 60-90 minutos y está completamente personalizada según tus necesidades específicas. La primera consulta de 30 minutos es gratuita.</p>
+
+                <h3>¿Cuántas sesiones necesitaré?</h3>
+                <p>Cada proceso es único. Algunos clientes experimentan cambios significativos en pocas sesiones, mientras que otros prefieren un acompañamiento más prolongado. Durante la consulta inicial evaluaremos juntas cuál es el mejor plan para ti.</p>
+
+                <h3>¿Qué metodologías utilizas?</h3>
+                <p>Combino diferentes enfoques según las necesidades de cada cliente:</p>
+                <ul>
+                    <li>Coaching ontológico y transformacional</li>
+                    <li>Técnicas de liberación emocional</li>
+                    <li>Reprogramación de patrones limitantes</li>
+                    <li>Mindfulness y presencia consciente</li>
+                    <li>Trabajo con el sistema nervioso</li>
+                </ul>
+
+                <h3>¿Es confidencial todo lo que compartimos?</h3>
+                <p>Absolutamente. Todas nuestras sesiones están protegidas por estricta confidencialidad profesional. Tu privacidad y confianza son fundamentales para el proceso de transformación.</p>
+
+                <h3>¿Tienes formación específica?</h3>
+                <p>Sí, cuento con certificaciones en coaching transformacional, intervención estratégica emocional, y formación continua en diversas metodologías de crecimiento personal y sanación emocional.</p>
+
+                <h3>¿Cómo puedo agendar una sesión?</h3>
+                <p>Puedes contactarme a través del formulario en esta web, por email a <strong>info@laurejong.com</strong> o por teléfono. Te responderé en menos de 24 horas para agendar tu consulta gratuita.</p>
+
+                <h3>¿Qué costo tienen las sesiones?</h3>
+                <p>Los precios varían según el tipo de sesión y modalidad. Durante la consulta inicial gratuita discutiremos las opciones que mejor se adapten a tu situación y presupuesto.</p>
+
+                <h3>¿Trabajas con crisis emocionales agudas?</h3>
+                <p>Mi trabajo se enfoca en crecimiento personal y transformación. Si estás atravesando una crisis emocional severa, te recomendaré primero buscar apoyo psicológico profesional, y después podemos complementar ese trabajo.</p>
+
+                <h3>¿Ofreces programas grupales?</h3>
+                <p>Sí, ocasionalmente organizo talleres y programas grupales. Si estás interesada, puedes suscribirte a mi newsletter o seguirme en redes sociales para estar al tanto de próximas fechas.</p>
+
+                <h3>¿Tienes alguna otra pregunta?</h3>
+                <p>Si no encontraste la respuesta que buscabas, no dudes en contactarme directamente. Estaré encantada de resolver todas tus dudas.</p>
+            </div>
+        </div>
+    </div>
+    <!-- MODALES NUEVOS - COACHING E INTERVENCIONES -->
+
+<!-- Modal Coaching - "Alcanza tus Objetivos" -->
+<div id="coachingModal" class="modal service-modal">
+    <div class="modal-content service-modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">¿Es esto para ti?</h2>
+            <button class="close-btn" onclick="closeServiceModal('coaching')">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="service-qualification">
+                <h3 class="qualification-title">ES PARA TI SI...</h3>
+                <div class="qualification-list">
+                    <div class="qualification-item">
+                        <span class="check-icon">✅</span>
+                        <p>Te has planteado objetivos importantes pero no logras avanzar hacia ellos</p>
+                    </div>
+                    <div class="qualification-item">
+                        <span class="check-icon">✅</span>
+                        <p>Sientes que no explotas todo tu potencial</p>
+                    </div>
+                    <div class="qualification-item">
+                        <span class="check-icon">✅</span>
+                        <p>Tienes miedos que te frenan hacia lo que quieres desarrollar</p>
+                    </div>
+                    <div class="qualification-item">
+                        <span class="check-icon">✅</span>
+                        <p>Quieres gestionar mejor tus emociones y mejorar tus relaciones</p>
+                    </div>
+                </div>
+
+                <h3 class="benefits-title">TE PERMITIRÁ...</h3>
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <span class="arrow-icon">→</span>
+                        <p>Llegar a tus metas en solo 5 sesiones</p>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="arrow-icon">→</span>
+                        <p>Desarrollar herramientas para toda la vida</p>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="arrow-icon">→</span>
+                        <p>Gestionar mejor tus emociones y relaciones</p>
+                    </div>
+                </div>
+
+                <div class="modal-guarantees">
+                    <div class="guarantee-item">
+                        <span class="guarantee-icon">⏰</span>
+                        <span>Plazas limitadas disponibles</span>
+                    </div>
+                    <div class="guarantee-item">
+                        <span class="guarantee-icon">💎</span>
+                        <span>Primera sesión gratuita</span>
+                    </div>
+                </div>
+
+                <a href="mailto:info@laurejong.com?subject=Solicitud%20Sesión%20de%20Descubrimiento%20-%20Alcanzar%20Objetivos&body=Hola%20Laure,%0D%0A%0D%0AMe%20interesa%20una%20sesión%20de%20descubrimiento%20para%20alcanzar%20mis%20objetivos%20a%20través%20del%20coaching.%0D%0A%0D%0AMi%20nombre:%20%0D%0AMi%20teléfono:%20%0D%0AMi%20mayor%20desafío%20actual:%20%0D%0A%0D%0AHorario%20preferido%20para%20la%20llamada:%20%0D%0A%0D%0AGracias!" 
+                   class="modal-cta-btn coaching-btn">
+                    Solicitar mi Sesión de Descubrimiento
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Intervenciones - "Transformación Profunda" -->
+<div id="intervencionesModal" class="modal service-modal">
+    <div class="modal-content service-modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">¿Es esto para ti?</h2>
+            <button class="close-btn" onclick="closeServiceModal('intervenciones')">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="service-qualification">
+                <h3 class="qualification-title">ES PARA TI SI SUFRES DE...</h3>
+                <div class="qualification-list">
+                    <div class="qualification-item">
+                        <span class="check-icon">✅</span>
+                        <p>Te encuentras sin ilusión o sientes que tu vida no tiene sentido</p>
+                    </div>
+                    <div class="qualification-item">
+                        <span class="check-icon">✅</span>
+                        <p>Te sientes estancada/o y no logras dar pasos para avanzar</p>
+                    </div>
+                    <div class="qualification-item">
+                        <span class="check-icon">✅</span>
+                        <p>El estrés y la ansiedad pueden contigo y no consigues librarte</p>
+                    </div>
+                    <div class="qualification-item">
+                        <span class="check-icon">✅</span>
+                        <p>Hay algo de tu pasado que no te deja vivir</p>
+                    </div>
+                </div>
+
+                <h3 class="benefits-title">TE PERMITIRÁ...</h3>
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <span class="arrow-icon">→</span>
+                        <p>Sanar heridas emocionales profundas</p>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="arrow-icon">→</span>
+                        <p>Recuperar tu poder personal y energía vital</p>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="arrow-icon">→</span>
+                        <p>Cambios duraderos en solo 1-2 sesiones</p>
+                    </div>
+                </div>
+
+                <div class="modal-guarantees">
+                    <div class="guarantee-item">
+                        <span class="guarantee-icon">⏰</span>
+                        <span>Plazas limitadas disponibles</span>
+                    </div>
+                    <div class="guarantee-item">
+                        <span class="guarantee-icon">💎</span>
+                        <span>Primera sesión gratuita</span>
+                    </div>
+                    <div class="guarantee-item">
+                        <span class="guarantee-icon">🎯</span>
+                        <span>Resultados en 1-2 sesiones</span>
+                    </div>
+                </div>
+
+                <a href="mailto:info@laurejong.com?subject=Solicitud%20Sesión%20de%20Descubrimiento%20-%20Transformación%20Profunda&body=Hola%20Laure,%0D%0A%0D%0AMe%20interesa%20una%20sesión%20de%20descubrimiento%20para%20una%20transformación%20profunda%20a%20través%20de%20intervención%20estratégica.%0D%0A%0D%0AMi%20nombre:%20%0D%0AMi%20teléfono:%20%0D%0AMi%20situación%20actual:%20%0D%0A%0D%0AHorario%20preferido%20para%20la%20llamada:%20%0D%0A%0D%0AGracias!" 
+                   class="modal-cta-btn intervenciones-btn">
+                    Solicitar mi Sesión de Descubrimiento
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- GESTIÓN DE COOKIES - Añadir antes del cierre de </body> -->
+
+<!-- Banner de Cookies -->
+<div id="cookieBanner" class="cookie-banner">
+    <div class="cookie-content">
+        <div class="cookie-icon">🍪</div>
+        <div class="cookie-text">
+            <h4>Cookies y Privacidad</h4>
+            <p>Utilizamos cookies técnicas necesarias para el funcionamiento del sitio y opcionales para analítica. 
+            <a href="#" onclick="openModal('cookies')" class="cookie-link">Ver política completa</a></p>
+        </div>
+        <div class="cookie-buttons">
+            <button onclick="acceptAllCookies()" class="cookie-btn accept">Aceptar todo</button>
+            <button onclick="showCookiePreferences()" class="cookie-btn configure">Configurar</button>
+            <button onclick="acceptEssentialOnly()" class="cookie-btn reject">Solo esenciales</button>
+        </div>
+    </div>
+</div>
+
+<!-- Panel de Configuración de Cookies -->
+<div id="cookiePreferences" class="cookie-preferences">
+    <div class="cookie-preferences-content">
+        <div class="cookie-header">
+            <h3>Configuración de Cookies</h3>
+            <button onclick="closeCookiePreferences()" class="cookie-close">&times;</button>
+        </div>
+        
+        <div class="cookie-categories">
+            <!-- Cookies Esenciales -->
+            <div class="cookie-category">
+                <div class="category-header">
+                    <div class="category-info">
+                        <h4>Cookies Técnicas</h4>
+                        <p>Necesarias para el funcionamiento básico del sitio web.</p>
+                    </div>
+                    <div class="category-toggle">
+                        <input type="checkbox" id="essential-cookies" checked disabled>
+                        <label for="essential-cookies" class="toggle-label">Siempre activas</label>
+                    </div>
+                </div>
+                <div class="category-details">
+                    <p><strong>Propósito:</strong> Formulario de contacto, navegación, seguridad</p>
+                    <p><strong>Duración:</strong> Sesión</p>
+                </div>
+            </div>
+
+            <!-- Cookies Analíticas -->
+            <div class="cookie-category">
+                <div class="category-header">
+                    <div class="category-info">
+                        <h4>Cookies de Análisis</h4>
+                        <p>Nos ayudan a entender cómo utilizas el sitio web para mejorarlo.</p>
+                    </div>
+                    <div class="category-toggle">
+                        <input type="checkbox" id="analytics-cookies" aria-labelledby="analytics-cookies-label">
+                        <label for="analytics-cookies" class="toggle-switch" id="analytics-cookies-label">
+                            <span class="toggle-slider"></span>
+                            <span class="visually-hidden">Activar o desactivar cookies de análisis</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="category-details">
+                    <p><strong>Propósito:</strong> Google Analytics (si se activa en el futuro)</p>
+                    <p><strong>Duración:</strong> 2 años</p>
+                    <p><strong>Terceros:</strong> Google</p>
+                </div>
+            </div>
+
+            <!-- Cookies de Funcionalidad -->
+            <div class="cookie-category">
+                <div class="category-header">
+                    <div class="category-info">
+                        <h4>Cookies de Funcionalidad</h4>
+                        <p>Mejoran la funcionalidad y personalización del sitio.</p>
+                    </div>
+                    <div class="category-toggle">
+                        <input type="checkbox" id="functional-cookies" title="Activar o desactivar cookies de funcionalidad">
+                        <label for="functional-cookies" class="toggle-switch">
+                            <span class="toggle-slider"></span>
+                            <span class="visually-hidden">Activar o desactivar cookies de funcionalidad</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="category-details">
+                    <p><strong>Propósito:</strong> Recordar preferencias, formularios</p>
+                    <p><strong>Duración:</strong> 1 año</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cookie-actions">
+            <button onclick="acceptEssentialOnly()" class="cookie-btn secondary">Solo esenciales</button>
+            <button onclick="savePreferences()" class="cookie-btn primary">Guardar preferencias</button>
+            <button onclick="acceptAllCookies()" class="cookie-btn accept">Aceptar todo</button>
+        </div>
+    </div>
+</div>
+
+<!-- Botón flotante de configuración de cookies -->
+<button id="cookieSettingsBtn" class="cookie-settings-btn" onclick="showCookiePreferences()" title="Configurar cookies">
+    🍪
+</button>
     <script src="js/main.js"></script>
 </body>
 </html>
