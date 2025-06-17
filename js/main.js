@@ -47,33 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ========================================
-    // 4. HERO TABS
-    // ========================================
-    // function initHeroTabs() {
-    //     document.querySelectorAll('.hero-tab').forEach(tab => {
-    //         tab.addEventListener('click', function() {
-            
-    //             document.querySelectorAll('.hero-tab').forEach(t => {
-    //                 t.classList.remove('active');
-    //             });
-                
-              
-    //             this.classList.add('active');
-                
-               
-    //             const tabName = this.getAttribute('data-tab');
-    //             const targetSection = document.getElementById(tabName);
-    //             if (targetSection) {
-    //                 targetSection.scrollIntoView({
-    //                     behavior: 'smooth',
-    //                     block: 'start'
-    //                 });
-    //             }
-    //         });
-    //     });
-    // }
-
-    // ========================================
     // 5. INSTAGRAM FUNCTIONALITY
     // ========================================
     function initInstagram() {
@@ -1288,3 +1261,72 @@ window.MobileMenu = {
         return mobileMenu ? mobileMenu.classList.contains('active') : false;
     }
 };
+
+ let currentVideoSlide = 0;
+        const videoSlides = document.querySelectorAll('.video-slide');
+        const videoDots = document.querySelectorAll('.video-dot');
+        const totalVideoSlides = videoSlides.length;
+
+        // Funcionalidad de tabs
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const targetTab = this.getAttribute('data-tab');
+                
+                // Remove active from all
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.testimonials-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active to current
+                this.classList.add('active');
+                const targetContent = document.getElementById(`${targetTab}-testimonials`);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+                
+                console.log(`📂 Cambiado a tab: ${targetTab}`);
+            });
+        });
+
+        // Funciones del carousel de videos
+        function showVideoSlide(index) {
+            videoSlides.forEach(slide => slide.classList.remove('active'));
+            videoDots.forEach(dot => dot.classList.remove('active'));
+            
+            if (videoSlides[index]) {
+                videoSlides[index].classList.add('active');
+            }
+            if (videoDots[index]) {
+                videoDots[index].classList.add('active');
+            }
+        }
+
+        function nextVideoSlide() {
+            currentVideoSlide = (currentVideoSlide + 1) % totalVideoSlides;
+            showVideoSlide(currentVideoSlide);
+        }
+
+        function prevVideoSlide() {
+            currentVideoSlide = (currentVideoSlide - 1 + totalVideoSlides) % totalVideoSlides;
+            showVideoSlide(currentVideoSlide);
+        }
+
+        // Event listeners para navegación
+        videoDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentVideoSlide = index;
+                showVideoSlide(currentVideoSlide);
+            });
+        });
+
+        document.querySelector('.video-prev-btn')?.addEventListener('click', prevVideoSlide);
+        document.querySelector('.video-next-btn')?.addEventListener('click', nextVideoSlide);
+
+        // Función para abrir YouTube
+        function openYouTubeVideo(videoId) {
+            const youtubeUrl = `https://www.youtube.com/watch?v=${videoId}`;
+            window.open(youtubeUrl, '_blank');
+            console.log(`▶️ Abriendo video de YouTube: ${videoId}`);
+        }
+
+        console.log('🎥 Sistema de videos inicializado correctamente');
+        console.log(`📊 Total de slides: ${totalVideoSlides}`);

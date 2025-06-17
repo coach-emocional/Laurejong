@@ -1,0 +1,210 @@
+.section-header.animate {
+  animation: fadeInUp 1s ease 0.2s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.coaching-card.animate {
+  animation: slideInUp 0.8s ease forwards;
+}
+
+.coaching-card:nth-child(1).animate {
+  animation-delay: 0.1s;
+}
+
+.coaching-card:nth-child(2).animate {
+  animation-delay: 0.3s;
+}
+
+.coaching-card:nth-child(3).animate {
+  animation-delay: 0.5s;
+}
+
+
+@keyframes gentlePulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    transform: scale(1.01);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  }
+}
+
+ @keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeftSoft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRightSoft {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.benefits-left .benefit-card.animate {
+  animation: fadeInLeftSoft 1.4s ease-out forwards;
+}
+
+.benefits-right .benefit-card.animate {
+  animation: fadeInRightSoft 1.4s ease-out forwards;
+}
+
+.benefits-left .benefit-card:nth-child(1).animate {
+  animation-delay: 0.2s;
+}
+.benefits-left .benefit-card:nth-child(2).animate {
+  animation-delay: 0.6s;
+}
+.benefits-left .benefit-card:nth-child(3).animate {
+  animation-delay: 1s;
+}
+
+.benefits-right .benefit-card:nth-child(1).animate {
+  animation-delay: 0.4s;
+}
+.benefits-right .benefit-card:nth-child(2).animate {
+  animation-delay: 0.8s;
+}
+.benefits-right .benefit-card:nth-child(3).animate {
+  animation-delay: 1.2s;
+}
+
+.intervention-card.animate {
+  animation: slideInUp 0.8s ease forwards;
+}
+
+.intervention-card:nth-child(1).animate {
+  animation-delay: 0.1s;
+}
+
+.intervention-card:nth-child(2).animate {
+  animation-delay: 0.3s;
+}
+
+.intervention-card:nth-child(3).animate {
+  animation-delay: 0.5s;
+}
+
+.intervention-card:nth-child(4).animate {
+  animation-delay: 0.7s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes shimmer {
+  0%,
+  100% {
+    transform: translateX(-100%) translateY(-100%) rotate(0deg);
+  }
+  50% {
+    transform: translateX(100%) translateY(100%) rotate(180deg);
+  }
+}
+
+@keyframes badgeShimmer {
+  0%,
+  100% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.hamburger.active .hamburger-line:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.mobile-link:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.mobile-link:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.mobile-link:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.mobile-link:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.mobile-link:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+@keyframes slideInMobile {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
