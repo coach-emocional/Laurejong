@@ -1,8 +1,4 @@
 /* ============================================
-   RESPONSIVE STYLES - ORGANIZED BY BREAKPOINT
-   ============================================ */
-
-/* ============================================
    TABLET - 769px a 1024px
    ============================================ */
 @media (max-width: 1024px) {
@@ -126,9 +122,9 @@
     width: 450px;
     padding: 1.5rem 2rem;
     background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-  }
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);}
 
   .benefit-title {
     font-size: 1.2rem;
@@ -461,7 +457,6 @@
   /* Benefits Section */
   .benefits-section {
     height: auto;
-    min-height: auto;
     padding: 4rem 1rem;
     background: linear-gradient(
         180deg,
@@ -523,8 +518,8 @@
     max-width: 400px;
     padding: 1.5rem 2rem;
     background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
+      backdrop-filter: blur(25px);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.3);
   }
@@ -1144,8 +1139,8 @@
     padding: 1.2rem 1.5rem;
     border-radius: 30px;
     background: rgba(255, 255, 255, 0.97);
-    backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
+     backdrop-filter: blur(30px);
   }
 
   .benefit-title {

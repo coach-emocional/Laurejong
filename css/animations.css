@@ -39,7 +39,6 @@
   animation-delay: 0.5s;
 }
 
-
 @keyframes gentlePulse {
   0%,
   100% {
@@ -52,7 +51,7 @@
   }
 }
 
- @keyframes slideInUp {
+@keyframes slideInUp {
   from {
     opacity: 0;
     transform: translateY(30px);
@@ -142,7 +141,6 @@
   }
 }
 
-
 @keyframes shimmer {
   0%,
   100% {
@@ -171,7 +169,6 @@
     opacity: 1;
   }
 }
-
 
 .hamburger.active .hamburger-line:nth-child(1) {
   transform: translateY(6px) rotate(45deg);
