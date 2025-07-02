@@ -17,7 +17,6 @@
   /* Tipografías */
   --font-heading: "Playfair Display", serif;
   --font-body: "Source Sans Pro", sans-serif;
-
   --h1: clamp(2.5rem, 5vw, 3.5rem);
   --h2: clamp(2rem, 4vw, 2.8rem);
   --h3: clamp(1.5rem, 3vw, 2rem);
@@ -48,8 +47,8 @@ body {
   padding: 1rem 2rem;
   -webkit-backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
- backdrop-filter: blur(10px);
-transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
   background: transparent;
   /*background: rgba(255, 255, 255, 1);*/
   border-bottom: none;
@@ -105,7 +104,11 @@ transition: all 0.3s ease;
   left: 20%;
   width: 18px;
   height: 18px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.8) 0%,
+    transparent 70%
+  );
   border-radius: 50%;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -457,7 +460,6 @@ transition: all 0.3s ease;
   cursor: pointer;
 }
 
-
 .coaching-card:hover {
   transform: translateY(-12px);
   box-shadow: 0 32px 80px rgba(0, 0, 0, 0.12);
@@ -506,7 +508,7 @@ transition: all 0.3s ease;
   opacity: 0;
   transition: all 0.5s ease;
   -webkit-backdrop-filter: blur(2px);
-   backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
 }
 
 .coaching-card:hover .video-overlay {
@@ -558,7 +560,7 @@ transition: all 0.3s ease;
   z-index: 10;
   letter-spacing: 0.5px;
   -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .coaching-card .instagram-badge:hover {
@@ -702,7 +704,7 @@ transition: all 0.3s ease;
   opacity: 0;
   transform: translateY(60px);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-    backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(16px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.3);
   position: relative;
   overflow: hidden;
@@ -753,7 +755,6 @@ transition: all 0.3s ease;
   transform: translateX(100%) translateY(100%);
 }
 
-
 .benefit-title {
   font-family: var(--font-heading);
   font-size: 1.3rem;
@@ -764,6 +765,7 @@ transition: all 0.3s ease;
   letter-spacing: -0.2px;
   text-align: center;
 }
+
 .benefit-title::after {
   content: "";
   display: block;
@@ -861,7 +863,7 @@ transition: all 0.3s ease;
   opacity: 0;
   transition: all 0.5s ease;
   -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
 }
 
 .intervention-card:hover .video-overlay {
@@ -913,7 +915,7 @@ transition: all 0.3s ease;
   z-index: 10;
   letter-spacing: 0.5px;
   -webkit-backdrop-filter: blur(10px);
-   backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .intervention-card .instagram-badge:hover {
@@ -949,13 +951,6 @@ transition: all 0.3s ease;
   margin-bottom: 0;
   font-weight: 300;
 }
-
-/* .testimonials {
-    padding: 6rem 2rem;
-     background: radial-gradient(circle at 0% 0%, rgba(229, 240, 226, 0.6), var(--light), var(--light));
-    position: relative;
-    overflow: hidden;
-  } */
 
 /* Testimonios Seccion */
 .testimonials-carousel {
@@ -1251,7 +1246,6 @@ transition: all 0.3s ease;
 .pause-btn:hover {
   background: var(--primary-green);
 }
-
 
 @supports not (-webkit-background-clip: text) {
   .section-title {
@@ -1579,7 +1573,7 @@ transition: all 0.3s ease;
   position: relative;
   display: grid;
   grid-template-columns: 1fr 650px;
- align-items: center;
+  align-items: center;
 }
 
 .contact-image {
@@ -1620,7 +1614,7 @@ transition: all 0.3s ease;
 .contact-form {
   background: rgba(255, 255, 255, 0.15);
   -webkit-backdrop-filter: blur(25px);
-    backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 24px;
   padding: 1.5rem 3rem;
@@ -1950,7 +1944,6 @@ transition: all 0.3s ease;
   animation: slideInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 .success-message h4 {
   color: var(--primary-green);
   margin-bottom: 1rem;
@@ -2046,7 +2039,7 @@ transition: all 0.3s ease;
   border-radius: 50%;
   background: linear-gradient(135deg, #8ab67b, #ae227b);
   overflow: hidden;
-  padding: 8px; 
+  padding: 8px;
 }
 
 .footer-logo img {
@@ -2054,12 +2047,11 @@ transition: all 0.3s ease;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.9); 
+  background: rgba(255, 255, 255, 0.9);
 }
 .footer-logo:hover {
   transform: scale(1.1);
 }
-
 
 .footer-text {
   color: #64748b;
@@ -2123,11 +2115,11 @@ transition: all 0.3s ease;
   justify-content: center;
   width: 48px;
   height: 48px;
-  background: rgba(255, 255, 255, 0.06); /* glass sutil */
+  background: rgba(255, 255, 255, 0.06);
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 12px; /* más suave que el círculo completo */
+  border-radius: 12px;
   color: var(--primary-green);
   text-decoration: none;
   font-size: 1.4rem;
@@ -2161,7 +2153,6 @@ transition: all 0.3s ease;
   position: relative;
   z-index: 1;
 }
-
 
 .footer-credit {
   display: flex;
@@ -2229,13 +2220,13 @@ transition: all 0.3s ease;
   padding: 0;
   max-width: 600px;
   width: 90%;
-  max-height: 85vh; 
+  max-height: 85vh;
   overflow: hidden;
   position: relative;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
   animation: slideInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 .service-modal .modal-header-integrated {
@@ -2246,7 +2237,7 @@ transition: all 0.3s ease;
   text-align: center;
   animation: gentlePulse 4s ease-in-out infinite;
   overflow: hidden;
-  flex-shrink: 0; 
+  flex-shrink: 0;
 }
 
 .service-modal .modal-header-integrated.coaching {
@@ -2366,8 +2357,8 @@ transition: all 0.3s ease;
 .service-modal .modal-body {
   padding: 2rem;
   overflow-y: auto;
-  flex: 1; 
-  min-height: 0; 
+  flex: 1;
+  min-height: 0;
 }
 
 .check-icon-perfect {
@@ -2517,11 +2508,6 @@ transition: all 0.3s ease;
   width: 6px;
 }
 
-.benefit-item-perfect:hover .benefit-icon-perfect {
-  transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(138, 182, 123, 0.4);
-}
-
 .qualification-title,
 .benefits-title {
   font-size: 1.2rem;
@@ -2601,7 +2587,7 @@ transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
   margin-top: 0.8rem;
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
@@ -2620,12 +2606,12 @@ transition: all 0.3s ease;
 .modal-cta-btn.intervenciones-btn {
   background: linear-gradient(135deg, #ae227b 0%, #c33f8f 100%);
   box-shadow: 0 8px 25px rgba(174, 34, 123, 0.4);
-    color: white;
+  color: white;
 }
 
 .modal-cta-btn.intervenciones-btn:hover {
   box-shadow: 0 15px 40px rgba(174, 34, 123, 0.5);
-  color: white ;
+  color: white;
 }
 
 .modal-cta-btn::before {
@@ -2693,8 +2679,8 @@ transition: all 0.3s ease;
   left: 0;
   right: 0;
   background: rgba(255, 255, 255, 0.98);
- -webkit-backdrop-filter: blur(15px);
-   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
   border-top: 2px solid var(--primary-green);
   z-index: 9999;
   transform: translateY(100%);
@@ -2803,7 +2789,7 @@ transition: all 0.3s ease;
   bottom: 0;
   background: rgba(0, 0, 0, 0.7);
   -webkit-backdrop-filter: blur(8px);
-   backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   z-index: 10000;
   display: none;
   align-items: center;
@@ -3063,12 +3049,12 @@ input:checked + .toggle-slider:before {
   background: linear-gradient(
     135deg,
     rgba(138, 182, 123, 0.08) 0%,
-     rgba(255, 255, 255, 0.96) 20%,
+    rgba(255, 255, 255, 0.96) 20%,
     rgba(255, 255, 255, 0.94) 80%,
     rgba(174, 34, 123, 0.06) 100%
   );
   -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   transform: translateX(-100%);
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1000;
@@ -3112,7 +3098,7 @@ input:checked + .toggle-slider:before {
   font-weight: 500;
   transition: all 0.3s ease;
   -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   transform: translateX(-20px);
   opacity: 0;
@@ -3134,7 +3120,6 @@ input:checked + .toggle-slider:before {
   font-size: 1.5rem;
   flex-shrink: 0;
 }
-
 
 .mobile-menu::before {
   content: "";
@@ -3170,7 +3155,7 @@ input:checked + .toggle-slider:before {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #25D366;
+  background: #25d366;
   color: white;
   padding: 10px 16px;
   border-radius: 30px;
@@ -3185,7 +3170,7 @@ input:checked + .toggle-slider:before {
 }
 
 .whatsapp-float-with-text:hover {
-  background: #20BA5A;
+  background: #20ba5a;
   transform: scale(1.05);
 }
 
@@ -3314,7 +3299,8 @@ input:checked + .toggle-slider:before {
   font-size: 0.95rem;
 }
 
-.modal-body ul, .modal-body ol {
+.modal-body ul,
+.modal-body ol {
   margin: 1rem 0;
   padding-left: 1.5rem;
 }
@@ -3353,179 +3339,19 @@ input:checked + .toggle-slider:before {
 }
 
 .modal-body::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--primary-green), var(--primary-pink));
+  background: linear-gradient(
+    180deg,
+    var(--primary-green),
+    var(--primary-pink)
+  );
   border-radius: 4px;
   transition: all 0.3s ease;
 }
 
 .modal-body::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, var(--secondary-green), var(--secondary-pink));
-}
-
-/* Animaciones */
-@keyframes shimmer {
-  0%, 100% {
-    transform: translateX(-100%) translateY(-100%) rotate(0deg);
-  }
-  50% {
-    transform: translateX(100%) translateY(100%) rotate(180deg);
-  }
-}
-
-/* ============================================
-   RESPONSIVE - TABLET (769px - 1024px)
-   ============================================ */
-@media (max-width: 1024px) {
-  .modal-content {
-    max-width: 650px;
-    width: 85%;
-  }
-
-  .modal-header {
-    padding: 1.3rem 1.8rem;
-  }
-
-  .modal-title {
-    font-size: 1.5rem;
-  }
-
-  .modal-body {
-    padding: 1.8rem;
-  }
-
-  .modal-body h3 {
-    font-size: 1.2rem;
-  }
-
-  .modal-body h4 {
-    font-size: 1.05rem;
-  }
-}
-
-/* ============================================
-   RESPONSIVE - MÓVIL (768px and below)
-   ============================================ */
-@media (max-width: 768px) {
-  .modal-content {
-    max-width: none;
-    width: 95%;
-    max-height: 90vh;
-    margin: 1rem;
-    border-radius: 16px;
-  }
-
-  .modal-header {
-    padding: 1.2rem 1.5rem;
-    border-radius: 16px 16px 0 0;
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-    position: relative;
-  }
-
-  .close-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    width: 35px;
-    height: 35px;
-    font-size: 1.3rem;
-  }
-
-  .modal-title {
-    font-size: 1.3rem;
-    margin-right: 2rem; /* Espacio para el botón cerrar */
-  }
-
-  .modal-body {
-    padding: 1.5rem;
-  }
-
-  .modal-body h3 {
-    font-size: 1.1rem;
-    margin: 1.5rem 0 0.8rem 0;
-  }
-
-  .modal-body h4 {
-    font-size: 1rem;
-    margin: 1.2rem 0 0.6rem 0;
-  }
-
-  .modal-body p {
-    font-size: 0.9rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .modal-body ul, .modal-body ol {
-    padding-left: 1.2rem;
-  }
-
-  .modal-body li {
-    font-size: 0.9rem;
-    margin-bottom: 0.4rem;
-  }
-}
-
-/* ============================================
-   RESPONSIVE - MÓVIL PEQUEÑO (480px and below)
-   ============================================ */
-@media (max-width: 480px) {
-  .modal-content {
-    width: 98%;
-    margin: 0.5rem;
-    border-radius: 12px;
-  }
-
-  .modal-header {
-    padding: 1rem 1.2rem;
-    border-radius: 12px 12px 0 0;
-  }
-
-  .modal-title {
-    font-size: 1.2rem;
-  }
-
-  .close-btn {
-    width: 32px;
-    height: 32px;
-    font-size: 1.2rem;
-  }
-
-  .modal-body {
-    padding: 1.2rem;
-  }
-
-  .modal-body h3 {
-    font-size: 1rem;
-  }
-
-  .modal-body h4 {
-    font-size: 0.95rem;
-  }
-
-  .modal-body p,
-  .modal-body li {
-    font-size: 0.85rem;
-  }
-}
-
-/* ============================================
-   LANDSCAPE ORIENTATION
-   ============================================ */
-@media (max-width: 768px) and (orientation: landscape) {
-  .modal-content {
-    max-height: 95vh;
-  }
-
-  .modal-header {
-    padding: 1rem 1.5rem;
-  }
-
-  .modal-title {
-    font-size: 1.2rem;
-  }
-
-  .modal-body {
-    padding: 1.2rem 1.5rem;
-  }
+  background: linear-gradient(
+    180deg,
+    var(--secondary-green),
+    var(--secondary-pink)
+  );
 }

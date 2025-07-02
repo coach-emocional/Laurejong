@@ -124,7 +124,8 @@
     background: rgba(255, 255, 255, 0.92);
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);}
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
 
   .benefit-title {
     font-size: 1.2rem;
@@ -134,7 +135,7 @@
     font-size: 0.95rem;
   }
 
-   .testimonials-enhanced {
+  .testimonials-enhanced {
     padding: 3rem 1.5rem !important;
   }
 
@@ -275,7 +276,6 @@
   .placeholder-thumbnail p {
     font-size: 1.1rem;
   }
- 
 }
 
 /* ============================================
@@ -519,7 +519,7 @@
     padding: 1.5rem 2rem;
     background: rgba(255, 255, 255, 0.95);
     -webkit-backdrop-filter: blur(25px);
-      backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.3);
   }
@@ -1140,7 +1140,7 @@
     border-radius: 30px;
     background: rgba(255, 255, 255, 0.97);
     -webkit-backdrop-filter: blur(30px);
-     backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
   }
 
   .benefit-title {
@@ -1375,5 +1375,164 @@
   .mobile-link {
     opacity: 1;
     transform: none;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - TABLET (769px - 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+  .modal-content {
+    max-width: 650px;
+    width: 85%;
+  }
+
+  .modal-header {
+    padding: 1.3rem 1.8rem;
+  }
+
+  .modal-title {
+    font-size: 1.5rem;
+  }
+
+  .modal-body {
+    padding: 1.8rem;
+  }
+
+  .modal-body h3 {
+    font-size: 1.2rem;
+  }
+
+  .modal-body h4 {
+    font-size: 1.05rem;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - MÓVIL (768px and below)
+   ============================================ */
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: none;
+    width: 95%;
+    max-height: 90vh;
+    margin: 1rem;
+    border-radius: 16px;
+  }
+
+  .modal-header {
+    padding: 1.2rem 1.5rem;
+    border-radius: 16px 16px 0 0;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 35px;
+    height: 35px;
+    font-size: 1.3rem;
+  }
+
+  .modal-title {
+    font-size: 1.3rem;
+    margin-right: 2rem;
+  }
+
+  .modal-body {
+    padding: 1.5rem;
+  }
+
+  .modal-body h3 {
+    font-size: 1.1rem;
+    margin: 1.5rem 0 0.8rem 0;
+  }
+
+  .modal-body h4 {
+    font-size: 1rem;
+    margin: 1.2rem 0 0.6rem 0;
+  }
+
+  .modal-body p {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .modal-body ul,
+  .modal-body ol {
+    padding-left: 1.2rem;
+  }
+
+  .modal-body li {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - MÓVIL PEQUEÑO (480px and below)
+   ============================================ */
+@media (max-width: 480px) {
+  .modal-content {
+    width: 98%;
+    margin: 0.5rem;
+    border-radius: 12px;
+  }
+
+  .modal-header {
+    padding: 1rem 1.2rem;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .modal-title {
+    font-size: 1.2rem;
+  }
+
+  .close-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+
+  .modal-body {
+    padding: 1.2rem;
+  }
+
+  .modal-body h3 {
+    font-size: 1rem;
+  }
+
+  .modal-body h4 {
+    font-size: 0.95rem;
+  }
+
+  .modal-body p,
+  .modal-body li {
+    font-size: 0.85rem;
+  }
+}
+
+/* ============================================
+   LANDSCAPE ORIENTATION
+   ============================================ */
+@media (max-width: 768px) and (orientation: landscape) {
+  .modal-content {
+    max-height: 95vh;
+  }
+
+  .modal-header {
+    padding: 1rem 1.5rem;
+  }
+
+  .modal-title {
+    font-size: 1.2rem;
+  }
+
+  .modal-body {
+    padding: 1.2rem 1.5rem;
   }
 }
