@@ -205,3 +205,8 @@
     opacity: 1;
   }
 }
+
+.benefit-item-perfect:hover .benefit-icon-perfect {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(138, 182, 123, 0.4);
+}
