@@ -66,11 +66,23 @@
   .intervention-card {
     max-width: 400px;
     margin: 0 auto;
+    height: 550px; /* Altura fija para tablets */
+    display: flex;
+    flex-direction: column;
   }
 
   .coaching-card .card-content,
   .intervention-card .card-content {
     padding: 2.5rem 2rem;
+    flex: 1;
+    overflow-y: auto;
+    max-height: 280px;
+  }
+
+  .coaching-card .card-image-container,
+  .intervention-card .card-image-container {
+    height: 230px; /* Altura ajustada para tablets */
+    flex-shrink: 0;
   }
 
   .coaching-card h3,
@@ -405,11 +417,23 @@
   .intervention-card {
     max-width: 100%;
     margin: 0 auto;
+    height: 500px; /* Altura fija para tablets pequeños */
+    display: flex;
+    flex-direction: column;
   }
 
   .coaching-card .card-content,
   .intervention-card .card-content {
     padding: 2rem 1.5rem;
+    flex: 1;
+    overflow-y: auto;
+    max-height: 250px;
+  }
+
+  .coaching-card .card-image-container,
+  .intervention-card .card-image-container {
+    height: 220px; /* Altura ajustada para tablets pequeños */
+    flex-shrink: 0;
   }
 
   .coaching-card h3,
@@ -451,7 +475,13 @@
 
   .coaching-card .card-image-container,
   .intervention-card .card-image-container {
-    height: 250px;
+    height: 220px; /* Ya ajustado arriba */
+  }
+  
+.section-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
   }
 
   /* Benefits Section */
@@ -1067,9 +1097,26 @@
     margin-top: 2rem;
   }
 
+  .coaching-card,
+  .intervention-card {
+    height: 450px; /* Altura fija para móviles */
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
   .coaching-card .card-content,
   .intervention-card .card-content {
     padding: 1.5rem 1rem;
+    flex: 1;
+    overflow-y: auto;
+    max-height: 200px;
+  }
+
+  .coaching-card .card-image-container,
+  .intervention-card .card-image-container {
+    height: 200px; /* Altura reducida para móviles */
+    flex-shrink: 0;
   }
 
   .coaching-card h3,
@@ -1100,7 +1147,7 @@
 
   .coaching-card .card-image-container,
   .intervention-card .card-image-container {
-    height: 220px;
+    height: 200px; /* Ya ajustado arriba */
   }
 
   /* Benefits Section */

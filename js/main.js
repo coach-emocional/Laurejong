@@ -47,6 +47,29 @@ document.addEventListener("DOMContentLoaded", function () {
   // 5. INSTAGRAM FUNCTIONALITY
   // ========================================
   function initInstagram() {
+    // Función para trackear clicks en Instagram
+    function trackInstagramClick(cardTitle) {
+    
+      
+      // Analytics tracking (Google Analytics, si está disponible)
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'click', {
+          'event_category': 'Social Media',
+          'event_label': `Instagram - ${cardTitle}`,
+          'transport_type': 'beacon'
+        });
+      }
+      
+      // Tracking alternativo con Google Analytics 4
+      if (typeof dataLayer !== 'undefined') {
+        dataLayer.push({
+          'event': 'instagram_click',
+          'service_name': cardTitle,
+          'click_type': 'instagram_badge'
+        });
+      }
+    }
+
     function openInstagram(instagramUrl) {
       window.open(
         instagramUrl,

@@ -15,14 +15,19 @@
   );
 
   /* Tipografías */
-  --font-heading: "Playfair Display", serif;
-  --font-body: "Source Sans Pro", sans-serif;
+  --font-heading: "Roboto", sans-serif;
+  --font-body: "Roboto", sans-serif;
+
+  /* Escalas tipográficas */
   --h1: clamp(2.5rem, 5vw, 3.5rem);
   --h2: clamp(2rem, 4vw, 2.8rem);
   --h3: clamp(1.5rem, 3vw, 2rem);
+  --h4: clamp(1.25rem, 2vw, 1.5rem);
   --body: clamp(1rem, 2vw, 1.1rem);
   --small: 0.9rem;
 }
+
+
 
 * {
   margin: 0;
@@ -387,7 +392,7 @@ body {
 }
 
 .coaching {
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
   background: var(--light);
 }
 
@@ -401,7 +406,7 @@ body {
   text-align: center;
   margin-bottom: 3rem;
   opacity: 0;
-  max-width: 800px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   opacity: 0;
@@ -426,21 +431,23 @@ body {
 }
 
 .section-description {
-  font-size: 1.3rem;
-  line-height: 1.7;
+  font-size: 1.2rem;
+  line-height: 1.6;
   color: #5a5a5a;
   font-weight: 300;
-  max-width: 700px;
+  max-width: 1200px;
   margin: 0 auto;
   letter-spacing: 0.2px;
+  text-align: center;
 }
 
 /* Seccion Coaching*/
 .coaching-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 50px;
+  gap: 30px;
   margin-top: 80px;
+  align-items: start; 
 }
 
 .coaching-card {
@@ -458,6 +465,9 @@ body {
   transform: translateY(30px);
   position: relative;
   cursor: pointer;
+  height: 600px; 
+  display: flex;
+  flex-direction: column;
 }
 
 .coaching-card:hover {
@@ -473,9 +483,10 @@ body {
 
 .coaching-card .card-image-container {
   position: relative;
-  height: 280px;
+  height: 250px; 
   overflow: hidden;
   background: linear-gradient(135deg, var(--light-green), var(--light-pink));
+  flex-shrink: 0; 
 }
 
 .coaching-card img {
@@ -575,8 +586,53 @@ body {
 }
 
 .coaching-card .card-content {
-  padding: 40px 35px;
+  padding: 35px 30px;
   text-align: center;
+  flex: 1;
+  overflow-y: auto;
+  max-height: 280px; 
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-green) rgba(138, 182, 123, 0.15);
+}
+
+/* Indicador de scroll sutil */
+.coaching-card .card-content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: linear-gradient(transparent, rgba(255, 254, 255, 0.8));
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Mostrar indicador cuando hay contenido desplazable */
+.coaching-card .card-content:not(:hover)::after {
+  opacity: 1;
+}
+
+/* Estilos de scrollbar para WebKit (Chrome, Safari, Edge) */
+.coaching-card .card-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.coaching-card .card-content::-webkit-scrollbar-track {
+  background: rgba(138, 182, 123, 0.1);
+  border-radius: 3px;
+}
+
+.coaching-card .card-content::-webkit-scrollbar-thumb {
+  background: var(--primary-green);
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.coaching-card .card-content::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-pink);
 }
 
 .coaching-card h3 {
@@ -592,9 +648,9 @@ body {
 .coaching-card .card-description {
   font-size: 1rem;
   color: #666666;
-  line-height: 1.7;
+  line-height: 1.8;
   margin-bottom: 0;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* Seccion Beneficios*/
@@ -788,7 +844,12 @@ body {
 /* Seccion Intervenciones o Desbloqueos*/
 .interventions {
   padding: 4rem 2rem;
-  background: var(--light);
+    background: radial-gradient(
+    circle at 0% 0%,
+    rgba(229, 240, 226, 0.6),
+    var(--light),
+    var(--light)
+  );
 }
 
 .interventions-grid {
