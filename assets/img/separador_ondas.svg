@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 60" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="breathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#bbd6b5;stop-opacity:0.12" />
+      <stop offset="50%" style="stop-color:#8ab67b;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#bbd6b5;stop-opacity:0.12" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Respiración: inspirar (subir) - pausa - exhalar (bajar) - pausa -->
+  <path d="M0,45 
+           Q100,20 200,25
+           Q250,20 300,20
+           Q400,45 500,40
+           Q550,45 600,45
+           Q700,20 800,25
+           Q850,20 900,20
+           Q1000,45 1100,40
+           Q1150,45 1200,45
+           
+           Q1150,50 1100,50
+           Q1000,55 900,50
+           Q850,55 800,55
+           Q700,50 600,55
+           Q550,50 500,50
+           Q400,55 300,50
+           Q250,55 200,55
+           Q100,50 0,55 Z" 
+        fill="url(#breathGradient)"/>
+</svg>

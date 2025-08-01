@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 60" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#bbd6b5;stop-opacity:0.15" />
+      <stop offset="30%" style="stop-color:#8ab67b;stop-opacity:0.25" />
+      <stop offset="70%" style="stop-color:#8ab67b;stop-opacity:0.25" />
+      <stop offset="100%" style="stop-color:#bbd6b5;stop-opacity:0.15" />
+    </linearGradient>
+    <linearGradient id="nodeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8ab67b;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#bbd6b5;stop-opacity:0.2" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Líneas de conexión curvas -->
+  <g stroke="url(#connectionGradient)" stroke-width="1.5" fill="none">
+    <!-- Conexión 1 -->
+    <path d="M100,30 Q200,15 300,30"/>
+    <!-- Conexión 2 -->
+    <path d="M250,35 Q350,20 450,35"/>
+    <!-- Conexión 3 -->
+    <path d="M400,25 Q500,40 600,25"/>
+    <!-- Conexión 4 -->
+    <path d="M550,40 Q650,15 750,35"/>
+    <!-- Conexión 5 -->
+    <path d="M700,30 Q800,45 900,25"/>
+    <!-- Conexión 6 -->
+    <path d="M850,35 Q950,20 1050,40"/>
+    
+    <!-- Conexiones verticales sutiles -->
+    <path d="M300,30 Q320,25 340,35"/>
+    <path d="M600,25 Q620,35 640,30"/>
+    <path d="M900,25 Q920,40 940,30"/>
+  </g>
+  
+  <!-- Nodos de conexión (pequeños círculos) -->
+  <g fill="url(#nodeGradient)">
+    <circle cx="100" cy="30" r="2"/>
+    <circle cx="300" cy="30" r="2"/>
+    <circle cx="450" cy="35" r="2"/>
+    <circle cx="600" cy="25" r="2"/>
+    <circle cx="750" cy="35" r="2"/>
+    <circle cx="900" cy="25" r="2"/>
+    <circle cx="1050" cy="40" r="2"/>
+  </g>
+</svg>
