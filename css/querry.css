@@ -295,6 +295,7 @@
    ============================================ */
 @media (max-width: 768px) {
   /* Hero Section */
+ 
   .hero {
     background: linear-gradient(
         180deg,
@@ -327,23 +328,24 @@
 
   .hero-content {
     padding-left: 0;
-    margin-top: 80px;
-    max-width: 100%;
+    width: 100%;
   }
-
+.hero-title {
+    font-size: clamp(1.4rem, 6vw, 2rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
   .hero-subtitle {
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
     letter-spacing: 1px;
   }
-
-  .hero-title {
-    font-size: clamp(1.8rem, 6vw, 2.5rem);
-    line-height: 1.2;
-  }
-
+.hero-title .gradient-text {
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  line-height: 1.2;
+}
   .hero-name {
-    font-size: clamp(1.4rem, 5vw, 1.8rem);
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
   }
@@ -374,8 +376,25 @@
     display: none;
   }
 
-  .nav-container {
-    position: relative;
+   .nav-container {
+    max-width: 100vw;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .nav-container ul {
+    flex-wrap: wrap;
+  }
+
+  .nav-logo,
+  .menu-toggle {
+    flex: 0 0 auto;
+  }
+.nav-logo {
+    margin-left: 0;
+  }
+  html, body {
+    overflow-x: hidden;
   }
 
   body.mobile-menu-open {
@@ -479,11 +498,10 @@
   }
   
 .section-description {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 1.5rem;
   }
-
   /* Benefits Section */
   .benefits-section {
     height: auto;
@@ -496,7 +514,7 @@
         rgba(255, 255, 255, 0.1) 75%,
         rgba(255, 255, 255, 0.05) 100%
       ),
-      url("../assets/img/seccion-beneficios.png");
+      url("../assets/img/beneficios.png");
     background-blend-mode: overlay;
     background-size: cover;
     background-position: center;
@@ -652,9 +670,35 @@
     height: auto;
   }
 
-  .contact-image {
+  /* .contact-image {
+    width: 500px;
     height: 300px;
     order: 1;
+  } */
+ .contact-image {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    margin: 2rem auto;
+    border-radius: 16px;
+    transform: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: none;
+    filter: brightness(1.02) saturate(1.05);
+  }
+
+  .contact-image::before {
+    background: linear-gradient(
+      135deg,
+      rgba(138, 182, 123, 0.06) 0%,
+      rgba(174, 34, 123, 0.08) 100%
+    );
   }
 
   .contact-form {
@@ -1030,7 +1074,7 @@
   }
 
   .hero-content {
-    margin-top: 60px;
+    margin-top: 440px;
   }
 
   .hero-subtitle {
@@ -1040,11 +1084,10 @@
   }
 
   .hero-title {
-    font-size: clamp(1.5rem, 7vw, 2rem);
+    font-size: clamp(1.5rem, 6vw, 2rem);
   }
 
   .hero-name {
-    font-size: clamp(1.2rem, 6vw, 1.5rem);
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
@@ -1079,6 +1122,7 @@
   .hamburger {
     width: 35px;
     height: 35px;
+  
   }
 
   .hamburger-line {
@@ -1161,7 +1205,7 @@
         rgba(255, 255, 255, 0.08) 85%,
         rgba(255, 255, 255, 0.05) 100%
       ),
-      url("../assets/img/seccion-beneficios.png");
+      url("../assets/img/beneficios.png");
     background-blend-mode: overlay;
     background-size: cover;
     background-position: center;
@@ -1172,8 +1216,8 @@
   }
 
   .section-title {
-    margin-bottom: 2.5rem;
-    font-size: clamp(1.8rem, 7vw, 2.2rem);
+    margin-bottom: 2rem;
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
     text-shadow: 0 2px 6px rgba(255, 255, 255, 0.9);
   }
 
@@ -1208,6 +1252,7 @@
 
   /* Contact */
   .contact-form {
+    width: 400px;
     padding: 1.5rem;
     transform: translateY(-1.5rem);
   }

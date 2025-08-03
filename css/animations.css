@@ -141,7 +141,7 @@
   }
 }
 
-@keyframes shimmer {
+/* @keyframes shimmer {
   0%,
   100% {
     transform: translateX(-100%) translateY(-100%) rotate(0deg);
@@ -149,7 +149,16 @@
   50% {
     transform: translateX(100%) translateY(100%) rotate(180deg);
   }
+} */
+ @keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
+
 
 @keyframes badgeShimmer {
   0%,

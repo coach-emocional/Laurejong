@@ -75,61 +75,72 @@ body {
 }
 
 .nav-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* .nav-logo-link {
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
-
-.nav-logo-link:hover {
-  transform: scale(1.1);
-}
-
 .nav-logo {
-  width: 50px;
-  height: 50px;
-  transition: all 0.3s ease;
-  border-radius: 50%;
-  background: rgba(138, 182, 123, 0.08);
-  overflow: hidden;
-  padding: 4px;
   position: relative;
-} */
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  overflow: hidden;
+ margin-left: 45px;
 
-/* .nav-logo::before {
-  content: "";
+}
+
+.nav-logo img {
   position: absolute;
-  top: 10%;
-  left: 20%;
-  width: 18px;
-  height: 18px;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.8) 0%,
-    transparent 70%
-  );
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   border-radius: 50%;
-  opacity: 0;
-  transition: opacity 0.3s ease;
   pointer-events: none;
 }
 
-.nav-logo-link:hover .nav-logo::before {
-  opacity: 1;
-} */
-
-.nav-logo img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  border-radius: 50%;
+/* Imagen con fondo: fade out suave y fade in */
+.logo-base {
+  z-index: 1;
+  animation: fadeBaseSoft 10s ease-in-out infinite;
 }
+
+/* Imagen sin fondo: fade in y fade out, cruzado */
+.logo-top {
+  z-index: 2;
+  animation: fadeTopSoft 10s ease-in-out infinite;
+}
+
+/* Keyframes más elegantes */
+@keyframes fadeBaseSoft {
+  0%, 35% {
+    opacity: 1;
+  }
+  50%, 85% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeTopSoft {
+  0%, 35% {
+    opacity: 0;
+  }
+  50%, 85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
 
 .nav-menu {
   display: flex;
@@ -215,7 +226,7 @@ body {
   display: block;
   flex: 1;
   width: 100%;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   min-height: calc(100vh - 160px); 
   position: relative;
 }
@@ -224,19 +235,20 @@ body {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 1s ease forwards;
-  padding-left: 2rem;
+  padding-left: 1.5rem;
   z-index: 2;
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 .hero-subtitle {
   color: var(--primary-green);
   font-size: 0.94rem;
   font-weight: 600;
-  margin-bottom: 2rem;
   line-height: 1.8;
   text-transform: uppercase;
   letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  margin-top: -2.5rem;
 }
 
 .hero-title {
@@ -325,27 +337,28 @@ body {
   justify-content: center;
   border: none;
   overflow: hidden;
+  animation: gentlePulse 4s ease-in-out infinite;
 }
 
 .hero-tab::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -100%;
-  width: 100%;
+  left: 0;
+  width: 150%;
   height: 100%;
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.25),
     transparent
   );
-  transition: left 1.5s ease;
+  animation: shimmer 4s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
 }
 
-.hero-tab:hover::before {
-  left: 100%;
-}
+
 
 .hero-tab:first-child {
   background: #d4c4b0;
@@ -366,8 +379,8 @@ body {
 }
 
 .hero-tab:last-child {
-  background: #c8dcc3;
-  color: #4a5d4e;
+  background:var(--secondary-green);
+  color: #fdfdfd;
   position: relative;
 }
 
@@ -837,18 +850,17 @@ body {
   letter-spacing: 0.2px;
   text-align: center;
 }
-.separator {
+
+/* .separator {
   position: absolute;
   bottom: -55px;
   left: 0;
   width: 100%;
   height: 130px;
-  background: url('../assets/img/separador_conexiones.svg') no-repeat center;
+  background: url('../assets/img/separador_onda.svg') no-repeat center;
   background-size: cover;
   z-index: 2;
-}
-
-
+} */
 /* Seccion Intervenciones o Desbloqueos*/
 .interventions {
   padding: 4rem 2rem;
@@ -1325,13 +1337,7 @@ body {
   }
 }
 .testimonials-enhanced {
-  padding: 6rem 2rem;
-  background: radial-gradient(
-    circle at 0% 0%,
-    rgba(229, 240, 226, 0.6),
-    var(--light),
-    var(--light)
-  );
+  padding: 2rem 2rem;
 }
 
 .testimonials-tabs {
@@ -1631,6 +1637,12 @@ body {
 
 /* Seccion Contacto*/
 .contact {
+   background: radial-gradient(
+    circle at 0% 0%,
+    rgba(229, 240, 226, 0.6),
+    var(--light),
+    var(--light)
+  );
   padding: 2rem;
   min-height: 100vh;
   display: flex;
@@ -1649,7 +1661,9 @@ body {
 
 .contact-image {
   position: relative;
+  margin-left: 90px;
   height: 680px;
+  width: 450px;
   border-radius: 24px;
   overflow: hidden;
   background: linear-gradient(135deg, var(--light-green), var(--light-pink));
@@ -1661,8 +1675,7 @@ body {
 .contact-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  /* object-position: center; */
+  object-fit: contain;
   transform: scale(1.05);
   filter: brightness(1.05) saturate(1.1);
 }
@@ -1670,10 +1683,6 @@ body {
 .contact-image::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background: linear-gradient(
     135deg,
     rgba(138, 182, 123, 0.08) 0%,
