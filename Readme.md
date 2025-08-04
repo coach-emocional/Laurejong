@@ -251,7 +251,7 @@ Interventora Estratégica Emocional • Coach • Inteligencia Consciente
 Para soporte técnico o consultas sobre el desarrollo, contacta a:
 
 **Irina Ichim** - Desarrolladora  
-📧 [contacto@irina-ichim.com](mailto:admin@irina-ichim.com)
+📧 [admin@irina-ichim.com](mailto:admin@irina-ichim.com)
 
 Para servicios de coaching emocional, contacta directamente a:
 
