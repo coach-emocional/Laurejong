@@ -39,7 +39,7 @@
   animation-delay: 0.5s;
 }
 
-@keyframes gentlePulse {
+/* @keyframes gentlePulse {
   0%,
   100% {
     transform: scale(1);
@@ -49,7 +49,7 @@
     transform: scale(1.01);
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
   }
-}
+} */
 
 @keyframes slideInUp {
   from {
@@ -150,15 +150,23 @@
     transform: translateX(100%) translateY(100%) rotate(180deg);
   }
 } */
- @keyframes shimmer {
-  0% {
-    transform: translateX(-100%);
+
+@keyframes gentlePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   }
-  100% {
-    transform: translateX(100%);
+  50% {
+    transform: scale(1.01);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
   }
 }
 
+@keyframes shimmer {
+  0% { transform: translateX(-150%); }
+  50% { transform: translateX(-60%); }
+  100% { transform: translateX(150%); }
+}
 
 @keyframes badgeShimmer {
   0%,

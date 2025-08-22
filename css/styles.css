@@ -19,14 +19,13 @@
   --font-body: "Roboto", sans-serif;
 
   /* Escalas tipográficas */
-  --h1: clamp(2.5rem, 5vw, 3.5rem);
-  --h2: clamp(2rem, 4vw, 2.8rem);
-  --h3: clamp(1.5rem, 3vw, 2rem);
-  --h4: clamp(1.25rem, 2vw, 1.5rem);
-  --body: clamp(1rem, 2vw, 1.1rem);
-  --small: 0.9rem;
+--h1: clamp(1.8rem, 4vw, 2.5rem);  /* Reducido significativamente */
+  --h2: clamp(1.5rem, 3vw, 2rem);    /* Más proporcionado con h1 */
+  --h3: clamp(1.3rem, 2.5vw, 1.7rem); /* Mejor jerarquía */
+  --h4: clamp(1.1rem, 2vw, 1.4rem);   /* Mantiene proporción */
+  --body: clamp(1rem, 2vw, 1.1rem);   /* Sin cambios */
+  --small: 0.9rem;      
 }
-
 
 
 * {
@@ -237,7 +236,7 @@ body {
   animation: fadeInUp 1s ease forwards;
   padding-left: 1.5rem;
   z-index: 2;
-  margin-top: 120px;
+  margin-top: 110px;
 }
 
 .hero-subtitle {
@@ -290,7 +289,7 @@ body {
 
 .hero-image {
   position: absolute;
-  top: 100px;
+  top: 140px;
   right: 0;
   height: calc(100vh - 160px);
   width: 50%;
@@ -322,12 +321,28 @@ body {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+/* Hero Tabs - Versión final corregida */
+.hero-tabs {
+  display: flex;
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
 .hero-tab {
   flex: 1;
   padding: 2.5rem 1.5rem;
   text-align: center;
   cursor: pointer;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 1.15rem;
@@ -358,44 +373,42 @@ body {
   z-index: 0;
 }
 
-
-
+/* PRIMER BOTÓN - SESIÓN DE CLARIDAD (Marrón) */
 .hero-tab:first-child {
-  background: #d4c4b0;
+  background: #564f46;
   color: white;
   position: relative;
 }
 
-.hero-tab:first-child:hover {
-  background: #c9b8a3;
-  transform: translateY(-4px);
-  box-shadow: 0 15px 40px rgba(212, 196, 176, 0.4);
-}
-
-.hero-tab:first-child.active {
-  background: #564f46;
-  transform: translateY(-4px);
-  box-shadow: 0 15px 40px rgba(86, 79, 70, 0.5);
-}
-
+/* SEGUNDO BOTÓN - SESIÓN ESTRATÉGICA (Verde) */
 .hero-tab:last-child {
-  background:var(--secondary-green);
+  background: var(--secondary-green);
   color: #fdfdfd;
   position: relative;
 }
 
-.hero-tab:last-child:hover {
-  background: #c33f8f;
-  color: white;
+/* HOVER - Ambos botones cambian a fucsia */
+.hero-tab:hover {
+  background: #c33f8f !important;
+  color: white !important;
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(138, 182, 123, 0.4);
+  box-shadow: 0 10px 30px rgba(195, 63, 143, 0.4);
+  animation: none; /* Pausa la animación en hover */
 }
 
-.hero-tab:last-child.active {
-  background: #c33f8f;
-  color: white;
-  transform: translateY(-4px);
-  box-shadow: 0 15px 40px rgba(138, 182, 123, 0.5);
+/* ESTADOS ACTIVOS - Eliminamos los cambios de color problemáticos */
+.hero-tab.active {
+  /* Solo un ligero hundimiento para indicar que está activo */
+  transform: translateY(1px);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* El hover sigue funcionando incluso cuando está activo */
+.hero-tab.active:hover {
+  background: #c33f8f !important;
+  color: white !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(195, 63, 143, 0.4);
 }
 
 .hero-tab span {
@@ -406,6 +419,8 @@ body {
   position: relative;
   z-index: 1;
 }
+
+
 
 .coaching {
   padding: 3rem 2rem;
