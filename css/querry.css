@@ -67,7 +67,7 @@
   .intervention-card {
     max-width: 400px;
     margin: 0 auto;
-    height: 550px; /* Altura fija para tablets */
+    height: 550px;
     display: flex;
     flex-direction: column;
   }
@@ -82,7 +82,7 @@
 
   .coaching-card .card-image-container,
   .intervention-card .card-image-container {
-    height: 230px; /* Altura ajustada para tablets */
+    height: 230px;
     flex-shrink: 0;
   }
 
@@ -104,7 +104,7 @@
         rgba(255, 255, 255, 0.15) 75%,
         rgba(255, 255, 255, 0.1) 100%
       ),
-      url("../assets/img/seccion-beneficios.png");
+      url("../assets/img/beneficios-de-coaching.png");
     background-blend-mode: overlay;
     background-size: cover;
     background-position: center;
@@ -437,7 +437,7 @@
   .intervention-card {
     max-width: 100%;
     margin: 0 auto;
-    height: 500px; /* Altura fija para tablets pequeños */
+    height: 500px; 
     display: flex;
     flex-direction: column;
   }
@@ -452,7 +452,7 @@
 
   .coaching-card .card-image-container,
   .intervention-card .card-image-container {
-    height: 220px; /* Altura ajustada para tablets pequeños */
+    height: 220px;
     flex-shrink: 0;
   }
 
@@ -495,7 +495,7 @@
 
   .coaching-card .card-image-container,
   .intervention-card .card-image-container {
-    height: 220px; /* Ya ajustado arriba */
+    height: 220px;
   }
   
 .section-description {
@@ -515,7 +515,7 @@
         rgba(255, 255, 255, 0.1) 75%,
         rgba(255, 255, 255, 0.05) 100%
       ),
-      url("../assets/img/beneficios.png");
+      url("../assets/img/beneficios-de-coaching.png");
     background-blend-mode: overlay;
     background-size: cover;
     background-position: center;
@@ -1160,7 +1160,7 @@
 
   .coaching-card .card-image-container,
   .intervention-card .card-image-container {
-    height: 200px; /* Altura reducida para móviles */
+    height: 200px;
     flex-shrink: 0;
   }
 
@@ -1192,7 +1192,7 @@
 
   .coaching-card .card-image-container,
   .intervention-card .card-image-container {
-    height: 200px; /* Ya ajustado arriba */
+    height: 200px; 
   }
 
   /* Benefits Section */
@@ -1206,7 +1206,7 @@
         rgba(255, 255, 255, 0.08) 85%,
         rgba(255, 255, 255, 0.05) 100%
       ),
-      url("../assets/img/beneficios.png");
+      url("../assets/img/beneficios-de-coaching.png");
     background-blend-mode: overlay;
     background-size: cover;
     background-position: center;

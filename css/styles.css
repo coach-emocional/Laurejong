@@ -19,14 +19,13 @@
   --font-body: "Roboto", sans-serif;
 
   /* Escalas tipográficas */
---h1: clamp(1.8rem, 4vw, 2.5rem);  /* Reducido significativamente */
-  --h2: clamp(1.5rem, 3vw, 2rem);    /* Más proporcionado con h1 */
-  --h3: clamp(1.3rem, 2.5vw, 1.7rem); /* Mejor jerarquía */
-  --h4: clamp(1.1rem, 2vw, 1.4rem);   /* Mantiene proporción */
-  --body: clamp(1rem, 2vw, 1.1rem);   /* Sin cambios */
+--h1: clamp(1.8rem, 4vw, 2.5rem); 
+  --h2: clamp(1.5rem, 3vw, 2rem); 
+  --h3: clamp(1.3rem, 2.5vw, 1.7rem);
+  --h4: clamp(1.1rem, 2vw, 1.4rem);
+  --body: clamp(1rem, 2vw, 1.1rem);
   --small: 0.9rem;      
 }
-
 
 * {
   margin: 0;
@@ -54,7 +53,6 @@ body {
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   background: transparent;
-  /*background: rgba(255, 255, 255, 1);*/
   border-bottom: none;
 }
 
@@ -102,19 +100,16 @@ body {
   pointer-events: none;
 }
 
-/* Imagen con fondo: fade out suave y fade in */
 .logo-base {
   z-index: 1;
   animation: fadeBaseSoft 10s ease-in-out infinite;
 }
 
-/* Imagen sin fondo: fade in y fade out, cruzado */
 .logo-top {
   z-index: 2;
   animation: fadeTopSoft 10s ease-in-out infinite;
 }
 
-/* Keyframes más elegantes */
 @keyframes fadeBaseSoft {
   0%, 35% {
     opacity: 1;
@@ -138,8 +133,6 @@ body {
     opacity: 0;
   }
 }
-
-
 
 .nav-menu {
   display: flex;
@@ -186,6 +179,7 @@ body {
   -webkit-text-fill-color: transparent;
   font-size: clamp(2.3rem, 3vw, 2.2rem);
 }
+
 .hero {
   min-height: 100vh;
   background: radial-gradient(
@@ -200,8 +194,6 @@ body {
   position: relative;
   overflow: hidden;
 }
-
-
 
 .hero::before {
   content: "";
@@ -321,7 +313,6 @@ body {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* Hero Tabs - Versión final corregida */
 .hero-tabs {
   display: flex;
   margin: 0;
@@ -372,38 +363,31 @@ body {
   pointer-events: none;
   z-index: 0;
 }
-
-/* PRIMER BOTÓN - SESIÓN DE CLARIDAD (Marrón) */
 .hero-tab:first-child {
   background: #564f46;
   color: white;
   position: relative;
 }
 
-/* SEGUNDO BOTÓN - SESIÓN ESTRATÉGICA (Verde) */
 .hero-tab:last-child {
   background: var(--secondary-green);
   color: #fdfdfd;
   position: relative;
 }
 
-/* HOVER - Ambos botones cambian a fucsia */
 .hero-tab:hover {
   background: #c33f8f !important;
   color: white !important;
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(195, 63, 143, 0.4);
-  animation: none; /* Pausa la animación en hover */
+  animation: none; 
 }
 
-/* ESTADOS ACTIVOS - Eliminamos los cambios de color problemáticos */
 .hero-tab.active {
-  /* Solo un ligero hundimiento para indicar que está activo */
   transform: translateY(1px);
   box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* El hover sigue funcionando incluso cuando está activo */
 .hero-tab.active:hover {
   background: #c33f8f !important;
   color: white !important;
@@ -419,8 +403,6 @@ body {
   position: relative;
   z-index: 1;
 }
-
-
 
 .coaching {
   padding: 3rem 2rem;
@@ -589,7 +571,7 @@ body {
     var(--primary-green) 100%
   );
   color: white;
-  padding: 0.6rem 1rem;
+  padding: 0.3rem 0.6rem;
   border-radius: 25px;
   font-size: 0.85rem;
   font-weight: 600;
@@ -641,12 +623,10 @@ body {
   transition: opacity 0.3s ease;
 }
 
-/* Mostrar indicador cuando hay contenido desplazable */
 .coaching-card .card-content:not(:hover)::after {
   opacity: 1;
 }
 
-/* Estilos de scrollbar para WebKit (Chrome, Safari, Edge) */
 .coaching-card .card-content::-webkit-scrollbar {
   width: 6px;
 }
@@ -686,13 +666,132 @@ body {
   text-align: justify;
   align-items: stretch;
 }
+/* Banner en movimiento */
+        .cta-ticker  {
+            margin-top: 4rem;
+            background: var(--light-green);
+            padding: 1rem 0;
+            overflow: hidden;
+            position: relative;
+            border-radius: 12px;
+        }
+        /* Banner en movimiento - Estilos base */
+.cta-ticker {
+    margin-top: 4rem;
+    padding: 1rem 0;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    background: var(--light-green); /* Color por defecto (coaching) */
+}
 
-/* Seccion Beneficios*/
+.ticker-content {
+    display: flex;
+    white-space: nowrap;
+    animation: none;
+}
+
+.ticker-item {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 3rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.ticker-cta {
+    color: var(--dark);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid var(--dark);
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+.ticker-cta:hover {
+    color: var(--primary-green); /* Hover por defecto (coaching) */
+    border-color: var(--primary-green);
+    text-decoration: none;
+}
+
+.ticker-separator {
+    margin: 0 1rem;
+    color: var(--primary-green); /* Color por defecto (coaching) */
+    font-size: 1.2rem;
+}
+
+.cta-ticker:hover .ticker-content {
+    animation-play-state: paused;
+}
+
+/* Específico para sección Intervenciones - Solo color diferente */
+.interventions .cta-ticker {
+    background: var(--light-pink); /* Cambio de color para intervenciones */
+}
+
+.interventions .ticker-cta:hover {
+    color: var(--primary-pink); /* Hover rosa para intervenciones */
+    border-color: var(--primary-pink);
+}
+
+.interventions .ticker-separator {
+    color: var(--primary-pink); /* Separadores rosa para intervenciones */
+}
+
+        .ticker-content {
+            display: flex;
+            white-space: nowrap;
+            animation: none;
+        }
+
+        .ticker-item {
+            display: inline-flex;
+            align-items: center;
+            padding: 0 3rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--light);
+        }
+
+        .ticker-cta {
+            color: var(--dark);
+            font-weight: 700;
+            text-decoration: none;
+            border-bottom: 2px solid var(--dark);
+            padding-bottom: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .ticker-cta:hover {
+            color: var(--primary-green);
+            border-color: var(--primary-green);
+            text-decoration: none;
+        }
+
+        .ticker-separator {
+            margin: 0 1rem;
+            color: var(--primary-green);
+            font-size: 1.2rem;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .cta-ticker:hover .ticker-content {
+            animation-play-state: paused;
+        }
 .benefits-section {
   height: 100vh;
   min-height: 800px;
   padding: 0;
-  background-image: url("../assets/img/beneficios.png");
+  background-image: url("../assets/img/beneficios-de-coaching.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -998,7 +1097,7 @@ body {
     var(--primary-green) 100%
   );
   color: white;
-  padding: 0.6rem 1rem;
+  padding: 0.3rem 0.5rem;
   border-radius: 25px;
   font-size: 0.85rem;
   font-weight: 600;
@@ -2287,8 +2386,6 @@ body {
   color: #64748b;
   font-size: 0.85rem;
 }
-
-/*Modales*/
 
 .modal {
   display: none;

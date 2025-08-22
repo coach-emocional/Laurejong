@@ -1157,3 +1157,57 @@ function openYouTubeVideo(videoId) {
   const youtubeUrl = `https://www.youtube.com/watch?v=${videoId}`;
   window.open(youtubeUrl, "_blank");
 }
+
+
+// Función genérica para crear scroll infinito
+function initInfiniteScroll(tickerId, tickerContentId) {
+    const ticker = document.getElementById(tickerId);
+    const tickerContent = document.getElementById(tickerContentId);
+    
+    if (!ticker || !tickerContent) return;
+    
+    const tickerItem = tickerContent.querySelector('.ticker-item'); // Misma clase
+    
+    if (!tickerItem) return;
+    
+    // Clonamos el contenido
+    const clone1 = tickerItem.cloneNode(true);
+    const clone2 = tickerItem.cloneNode(true);
+    const clone3 = tickerItem.cloneNode(true);
+    
+    tickerContent.appendChild(clone1);
+    tickerContent.appendChild(clone2);
+    tickerContent.appendChild(clone3);
+    
+    let scrollPosition = 0;
+    const scrollSpeed = 1;
+    const itemWidth = tickerItem.offsetWidth;
+    
+    function scroll() {
+        scrollPosition += scrollSpeed;
+        
+        if (scrollPosition >= itemWidth) {
+            scrollPosition = 0;
+        }
+        
+        tickerContent.style.transform = `translateX(-${scrollPosition}px)`;
+        requestAnimationFrame(scroll);
+    }
+    
+    scroll();
+    
+    // Pausar en hover
+    ticker.addEventListener('mouseenter', () => {
+        tickerContent.style.animationPlayState = 'paused';
+    });
+    
+    ticker.addEventListener('mouseleave', () => {
+        tickerContent.style.animationPlayState = 'running';
+    });
+}
+
+// Inicializar ambos tickers
+document.addEventListener('DOMContentLoaded', function() {
+    initInfiniteScroll('ticker', 'tickerContent');
+    initInfiniteScroll('interventionsTicker', 'interventionsTickerContent');
+});
