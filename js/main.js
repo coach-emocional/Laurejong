@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.getElementById("navbar");
   const contactForm = document.getElementById("contactForm");
   const benefitsSection = document.querySelector(".benefits-section");
+  initInfiniteScroll('ticker', 'tickerContent');
+    initInfiniteScroll('interventionsTicker', 'interventionsTickerContent');
 
   // ========================================
   // 2. NAVBAR SCROLL EFFECT
@@ -1206,8 +1208,3 @@ function initInfiniteScroll(tickerId, tickerContentId) {
     });
 }
 
-// Inicializar ambos tickers
-document.addEventListener('DOMContentLoaded', function() {
-    initInfiniteScroll('ticker', 'tickerContent');
-    initInfiniteScroll('interventionsTicker', 'interventionsTickerContent');
-});
