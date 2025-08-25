@@ -203,7 +203,7 @@ body {
   animation: fadeInUp 1s ease forwards;
   padding-left: 1.5rem;
   z-index: 2;
-  margin-top: 110px;
+  margin-top: 160px;
 }
 
 .hero-subtitle {
@@ -289,21 +289,6 @@ body {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.hero-tabs {
-  display: flex;
-  margin: 0;
-  border-radius: 0;
-  overflow: hidden;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-}
-
 .hero-tab {
   flex: 1;
   padding: 2.5rem 1.5rem;
@@ -341,7 +326,7 @@ body {
 }
 
 .hero-tab:first-child {
-  background: #564f46;
+  background: #564f46; /* marrón */
   color: white;
   position: relative;
 }
@@ -352,11 +337,21 @@ body {
   position: relative;
 }
 
+/* Hover genérico (fucsia) */
 .hero-tab:hover {
   background: #c33f8f !important;
   color: white !important;
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(195, 63, 143, 0.4);
+  animation: none;
+}
+
+/* Excepción: el primero pasa a verde */
+.hero-tab:first-child:hover {
+  background: var(--secondary-green) !important;
+  color: white !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 128, 0, 0.3);
   animation: none;
 }
 
@@ -380,6 +375,7 @@ body {
   position: relative;
   z-index: 1;
 }
+
 
 .coaching {
   padding: 3rem 2rem;
