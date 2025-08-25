@@ -649,22 +649,40 @@ body {
   overflow: hidden;
   position: relative;
   border-radius: 12px;
-  background: rgba(187, 214, 181, 0.3);
+  background: var(--light-green);
 }
 
 .ticker-content {
-  display: flex;
+  display: inline-flex;
   white-space: nowrap;
-  animation: none;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+  will-change: transform;
+  /* Suavizado de hardware */
+  backface-visibility: hidden;
+  perspective: 1000px;
+  /* Suavizado de la animación */
+  transform-style: preserve-3d;
 }
 
 .ticker-item {
+  flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
-  padding: 0 3rem;
-  font-size: 1.1rem;
+  padding: 0;
   font-weight: 500;
   color: var(--dark);
+  /* Evita el flickering en algunos navegadores */
+  backface-visibility: hidden;
+}
+
+.ticker-item > * {
+  padding: 0 1rem;
+  /* Suavizado del texto */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .ticker-cta {
@@ -682,17 +700,8 @@ body {
   text-decoration: none;
 }
 
-.cta-ticker:hover .ticker-content {
-  animation-play-state: paused;
-}
-
-#interventionsTicker {
-  background: var(--light-pink);
-  /* background: rgba(222, 155, 195, 0.08); */
-}
-
 .ticker-separator {
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   color: var(--light);
   font-size: 1.2rem;
 }
@@ -700,6 +709,11 @@ body {
 .cta-ticker:hover .ticker-content {
   animation-play-state: paused;
 }
+
+#interventionsTicker {
+  background: var(--light-pink);
+}
+
 
 .benefits-section {
   height: 100vh;
@@ -1678,24 +1692,99 @@ body {
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15), 0 10px 25px rgba(0, 0, 0, 0.1);
   transform: scale(1.02);
 }
-
 .contact-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transform: scale(1.05);
-  filter: brightness(1.05) saturate(1.1);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    filter: brightness(0.9) contrast(1.05);
 }
 
-.contact-image::before {
-  content: "";
-  position: absolute;
-  background: linear-gradient(
-    135deg,
-    rgba(138, 182, 123, 0.08) 0%,
-    rgba(174, 34, 123, 0.12) 100%
-  );
-  z-index: 1;
+.contact-image:hover img {
+    transform: scale(1.05);
+    filter: brightness(1) contrast(1.2);
+}
+
+.contact-image .video-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(138, 182, 123, 0.55) 0%,  /* verde */
+        rgba(174, 34, 123, 0.7) 100%   /* fucsia */
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    border-radius: 12px;
+}
+
+.contact-image:hover .video-overlay {
+    opacity: 1;
+}
+
+.contact-image .play-button {
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+    margin-left: 4px; /* Para centrar visualmente el triángulo */
+}
+
+.contact-image .play-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 35px rgba(255, 255, 255, 0.5);
+    background: white;
+}
+
+.contact-image .instagram-badge {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    background: linear-gradient(
+        135deg,
+        var(--primary-green) 0%,  /* verde */
+        var(--primary-pink) 100%  /* fucsia */
+    );
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 20px rgba(174, 34, 123, 0.3);
+    z-index: 10;
+    letter-spacing: 0.5px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.contact-image .instagram-badge:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(174, 34, 123, 0.4);
+}
+
+.contact-image .instagram-badge::before {
+    content: "📱";
+    font-size: 1rem;
+    animation: gentlePulse 4s ease-in-out infinite;
 }
 
 /* Formulario */
@@ -3446,3 +3535,5 @@ input:checked + .toggle-slider:before {
   padding: 2rem 1rem;
   text-align: center;
 }
+
+

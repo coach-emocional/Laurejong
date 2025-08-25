@@ -1161,50 +1161,45 @@ function openYouTubeVideo(videoId) {
 }
 
 
-// Función genérica para crear scroll infinito
-function initInfiniteScroll(tickerId, tickerContentId) {
-    const ticker = document.getElementById(tickerId);
-    const tickerContent = document.getElementById(tickerContentId);
-    
-    if (!ticker || !tickerContent) return;
-    
-    const tickerItem = tickerContent.querySelector('.ticker-item'); // Misma clase
-    
-    if (!tickerItem) return;
-    
-    // Clonamos el contenido
-    const clone1 = tickerItem.cloneNode(true);
-    const clone2 = tickerItem.cloneNode(true);
-    const clone3 = tickerItem.cloneNode(true);
-    
-    tickerContent.appendChild(clone1);
-    tickerContent.appendChild(clone2);
-    tickerContent.appendChild(clone3);
-    
-    let scrollPosition = 0;
-    const scrollSpeed = 1;
-    const itemWidth = tickerItem.offsetWidth;
-    
-    function scroll() {
-        scrollPosition += scrollSpeed;
-        
-        if (scrollPosition >= itemWidth) {
-            scrollPosition = 0;
-        }
-        
-        tickerContent.style.transform = `translateX(-${scrollPosition}px)`;
-        requestAnimationFrame(scroll);
+function initInfiniteScroll(tickerId, tickerContentId, { speed = 40 } = {}) {
+  const ticker = document.getElementById(tickerId);
+  const content = document.getElementById(tickerContentId);
+  if (!ticker || !content) return;
+
+  const originals = Array.from(content.children);
+  if (!originals.length) return;
+
+  const originalWidth = content.scrollWidth;
+
+  // Triplicamos el contenido para bucle perfecto
+  const totalCopies = 3;
+  for (let i = 0; i < totalCopies - 1; i++) {
+    originals.forEach(n => content.appendChild(n.cloneNode(true)));
+  }
+
+  let x = 0;
+  let paused = false;
+  let lastTs = null;
+
+  function step(ts) {
+    if (lastTs == null) lastTs = ts;
+    const dt = (ts - lastTs) / 1000;
+    lastTs = ts;
+
+    if (!paused) {
+      x += speed * dt;
+      
+      // Módulo matemático para bucle perfecto sin saltos
+      // Usamos el primer tercio como referencia
+      const position = x % originalWidth;
+      
+      content.style.transform = `translate3d(-${position}px, 0, 0)`;
     }
-    
-    scroll();
-    
-    // Pausar en hover
-    ticker.addEventListener('mouseenter', () => {
-        tickerContent.style.animationPlayState = 'paused';
-    });
-    
-    ticker.addEventListener('mouseleave', () => {
-        tickerContent.style.animationPlayState = 'running';
-    });
+    requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+
+  ticker.addEventListener('mouseenter', () => { paused = true; });
+  ticker.addEventListener('mouseleave', () => { paused = false; });
 }
 
