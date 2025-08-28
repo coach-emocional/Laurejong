@@ -155,6 +155,18 @@ body {
   font-size: clamp(2.3rem, 3vw, 2.2rem);
 }
 
+/* Gradiente específico para sección coaching - Verde a Fucsia */
+.coaching .gradient-text {
+  background: linear-gradient(
+    135deg,
+    #2d8f3f,
+    var(--primary-pink)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .hero {
   min-height: 100vh;
   background: radial-gradient(
@@ -346,12 +358,21 @@ body {
   animation: none;
 }
 
-/* Excepción: el primero pasa a verde */
+/* Botón Desbloqueo Emocional (primer botón) - hover fucsia */
 .hero-tab:first-child:hover {
-  background: var(--secondary-green) !important;
+  background: var(--primary-pink) !important;
   color: white !important;
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 128, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(174, 34, 123, 0.4);
+  animation: none;
+}
+
+/* Botón Coaching (segundo botón) - hover verde */
+.hero-tab:last-child:hover {
+  background: #2d8f3f !important;
+  color: white !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(45, 143, 63, 0.4);
   animation: none;
 }
 
@@ -716,16 +737,14 @@ body {
 
 
 .benefits-section {
-  height: 100vh;
-  min-height: 800px;
-  padding: 0;
+  min-height: 100vh;
+  padding: 4rem 2rem;
   background-image: url("../assets/img/beneficios-de-coaching.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   position: relative;
-  overflow: hidden;
   display: flex;
   text-align: center;
   align-items: center;
@@ -744,11 +763,11 @@ body {
 .benefits-layout {
   display: flex;
   width: 100%;
-  max-width: 1200px;
-  gap: 4rem;
+  max-width: 1400px;
+  gap: 6rem;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .benefits-left {
@@ -756,20 +775,21 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: -10rem;
+  margin-left: 0;
+  max-width: 42%;
 }
 
 .benefits-left .benefit-card:nth-child(1) {
   align-self: flex-start;
-  margin: 2rem 0 3rem 1rem;
+  margin: 2rem 0 4rem 1rem;
 }
 .benefits-left .benefit-card:nth-child(2) {
   align-self: flex-end;
-  margin: 2.5rem 0 3rem 4rem;
+  margin: 3rem 0 4rem 4rem;
 }
 .benefits-left .benefit-card:nth-child(3) {
   align-self: center;
-  margin: 2rem 0 0 2.5rem;
+  margin: 3rem 0 0 2.5rem;
 }
 
 .benefits-right {
@@ -777,28 +797,31 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-left: 16rem;
-  margin-top: 2rem;
+  padding-left: 0;
+  margin-top: 0;
+  max-width: 42%;
 }
 
 .benefits-right .benefit-card:nth-child(1) {
   align-self: flex-end;
-  margin: 1.5rem 2.5rem 3rem 0;
+  margin: 1.5rem 2.5rem 4rem 0;
 }
 .benefits-right .benefit-card:nth-child(2) {
   align-self: center;
-  margin: 2.5rem 0 3rem 2.5rem;
+  margin: 3rem 0 4rem 2.5rem;
 }
 .benefits-right .benefit-card:nth-child(3) {
   align-self: flex-start;
-  margin: 2rem 1.5rem 0 0;
+  margin: 3rem 1.5rem 0 0;
 }
 
 .benefit-card {
   background: rgba(255, 255, 255, 0.15);
   padding: 0.4rem 0.8rem;
   border-radius: 40px;
-  width: 520px;
+  width: 100%;
+  max-width: 450px;
+  min-width: 280px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
   transition: all 0.4s ease;
   opacity: 0;
@@ -828,19 +851,51 @@ body {
   transition: transform 1.2s ease;
 }
 
-.benefit-card.animate::before {
-  transform: scaleX(1);
-  transition-delay: 0.8s;
+/* Beneficios de la izquierda - Colores fucsia para desbloqueos */
+.benefits-left .benefit-card::before {
+  background: linear-gradient(
+    90deg,
+    rgba(222, 59, 153, 0.8) 0%,
+    rgba(174, 34, 123, 0.7) 100%
+  );
 }
 
-.benefit-card:hover {
+.benefits-left .benefit-card:hover {
   background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 20px 60px rgba(138, 182, 123, 0.15);
-  border: 1px solid rgba(138, 182, 123, 0.25);
+  box-shadow: 0 20px 60px rgba(222, 59, 153, 0.2);
+  border: 1px solid rgba(222, 59, 153, 0.3);
   transform: translateY(-5px);
 }
 
-.benefit-card::after {
+.benefits-left .benefit-card::after {
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.4) 48%,
+    rgba(222, 59, 153, 0.2) 50%,
+    rgba(255, 255, 255, 0.4) 52%,
+    transparent 70%
+  );
+  transform: translateX(-100%) translateY(-100%);
+}
+
+/* Beneficios de la derecha - Colores verdes para coaching */
+.benefits-right .benefit-card::before {
+  background: linear-gradient(
+    90deg,
+    rgba(138, 182, 123, 0.8) 0%,
+    rgba(106, 158, 87, 0.7) 100%
+  );
+}
+
+.benefits-right .benefit-card:hover {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 60px rgba(138, 182, 123, 0.2);
+  border: 1px solid rgba(138, 182, 123, 0.3);
+  transform: translateY(-5px);
+}
+
+.benefits-right .benefit-card::after {
   background: linear-gradient(
     45deg,
     transparent 30%,
@@ -850,6 +905,11 @@ body {
     transparent 70%
   );
   transform: translateX(-100%) translateY(-100%);
+}
+
+.benefit-card.animate::before {
+  transform: scaleX(1);
+  transition-delay: 0.8s;
 }
 
 .benefit-card:hover::after {
@@ -875,6 +935,16 @@ body {
   margin: 0.5rem auto 0;
   background: var(--primary-green);
   border-radius: 4px;
+}
+
+/* Títulos de beneficios izquierda - Fucsia para desbloqueos */
+.benefits-left .benefit-title::after {
+  background: linear-gradient(90deg, #de3b99, #ae227b);
+}
+
+/* Títulos de beneficios derecha - Verde para coaching */
+.benefits-right .benefit-title::after {
+  background: linear-gradient(90deg, #8ab67b, #6a9e57);
 }
 
 .benefit-description {
@@ -2197,16 +2267,139 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 3rem;
-  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+    "brand contact booking credit"
+    "links links links links";
+  gap: 2rem;
+  align-items: start;
 }
 
 .footer-brand {
+  grid-area: brand;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
+  align-self: start;
+}
+
+.footer-contact {
+  grid-area: contact;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-self: start;
+}
+
+.footer-contact h4 {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  font-family: 'Lora', serif;
+}
+
+.footer-contact p {
+  margin: 0.3rem 0;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-contact i {
+  width: 16px;
+  color: var(--primary-green);
+}
+
+.footer-booking-center {
+  grid-area: booking;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  text-align: left;
+  align-self: start;
+}
+
+.footer-booking-center h4 {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  font-family: 'Lora', serif;
+}
+
+.footer-booking-center .booking-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.footer-booking-center .booking-btn-simple {
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  min-width: auto;
+  flex: 0 0 auto;
+}
+
+.footer-credit {
+  grid-area: credit;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  justify-self: end;
+}
+
+.footer-links {
+  grid-area: links;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(138, 182, 123, 0.2);
+  margin-top: 1rem;
+}
+
+.footer-credit .footer-brand-text {
+  color: var(--secondary-green);
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.8;
+  text-align: right;
+  line-height: 1.4;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  margin: 0;
+}
+
+.footer-credit .irina-dev-logo {
+  width: 120px;
+  height: auto;
+  opacity: 0.9;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  filter: drop-shadow(0 2px 4px rgba(45, 143, 63, 0.1));
+}
+
+.footer-credit .credit-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.footer-credit .credit-link:hover .irina-dev-logo {
+  transform: scale(1.05) translateY(-2px);
+  opacity: 1;
+  filter: drop-shadow(0 6px 12px rgba(45, 143, 63, 0.15));
 }
 
 .footer-logo {
@@ -2283,7 +2476,11 @@ body {
   display: flex;
   gap: 1rem;
   justify-content: center;
-  margin-top: 1rem;
+}
+
+.footer-booking-center .footer-social {
+  margin-top: 1.2rem;
+  justify-content: center;
 }
 
 .social-link {
@@ -2331,30 +2528,192 @@ body {
   z-index: 1;
 }
 
+/* Botones de Reserva Simplificados en Footer */
+.footer-booking-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.booking-title-simple {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #8ab67b;
+  margin: 0 0 0.5rem 0;
+}
+
+.booking-buttons-simple {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.booking-btn-simple {
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.booking-btn-simple.booking-btn-intervention {
+  background: linear-gradient(135deg, rgba(174, 34, 123, 0.1), rgba(222, 155, 195, 0.1));
+  color: #ae227b;
+  border-color: rgba(174, 34, 123, 0.2);
+}
+
+.booking-btn-simple.booking-btn-coaching {
+  background: linear-gradient(135deg, rgba(138, 182, 123, 0.1), rgba(106, 158, 87, 0.1));
+  color: #8ab67b;
+  border-color: rgba(138, 182, 123, 0.2);
+}
+
+.booking-btn-simple:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.booking-btn-simple.booking-btn-intervention:hover {
+  background: rgba(174, 34, 123, 0.1);
+  border-color: rgba(174, 34, 123, 0.4);
+  box-shadow: 0 6px 20px rgba(174, 34, 123, 0.15);
+}
+
+.booking-btn-simple.booking-btn-coaching:hover {
+  background: rgba(138, 182, 123, 0.1);
+  border-color: rgba(138, 182, 123, 0.4);
+  box-shadow: 0 6px 20px rgba(138, 182, 123, 0.15);
+}
+
 .footer-credit {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 1rem;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.credit-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 1rem;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(138, 182, 123, 0.1);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.02) 0%,
+    rgba(138, 182, 123, 0.03) 100%
+  );
+}
+
+.credit-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(222, 67, 186, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+  z-index: 0;
+}
+
+.credit-link:hover::before {
+  left: 100%;
+}
+
+.credit-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(138, 182, 123, 0.15);
+  border-color: rgba(222, 67, 186, 0.2);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(222, 67, 186, 0.08) 100%
+  );
 }
 
 .credit-text {
   color: #64748b;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   text-align: right;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.credit-link:hover .credit-text {
+  color: #8ab67b;
 }
 
 .irina-dev-logo {
-  width: 120px;
+  width: 100px;
   height: auto;
-  transition: all 0.3s ease;
-  opacity: 0.8;
-  margin-right: -15px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.85;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+  position: relative;
+  z-index: 1;
 }
 
-.irina-dev-logo:hover {
+.credit-link:hover .irina-dev-logo {
   opacity: 1;
-  transform: scale(1.05);
+  transform: scale(1.08) translateY(-1px);
+  filter: drop-shadow(0 4px 15px rgba(222, 67, 186, 0.2));
+}
+
+/* Efecto de partículas sutiles */
+.credit-link::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(
+    circle,
+    rgba(222, 67, 186, 0.4) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.credit-link:hover::after {
+  opacity: 1;
+  animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% { 
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  50% { 
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
 }
 
 .footer-bottom {
@@ -3535,5 +3894,7 @@ input:checked + .toggle-slider:before {
   padding: 2rem 1rem;
   text-align: center;
 }
+
+
 
 
