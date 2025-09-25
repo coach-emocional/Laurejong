@@ -3895,6 +3895,13 @@ input:checked + .toggle-slider:before {
   text-align: center;
 }
 
-
-
+.gradient-text-coaching {
+  background: linear-gradient(90deg, var(--primary-green) 0%, var(--primary-green) 30%, var(--primary-pink) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: bold;
+  text-shadow: 0 2px 8px rgba(46, 125, 50, 0.15);
+}
 
