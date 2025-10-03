@@ -97,12 +97,14 @@
 
   .hero-image {
     display: none;
+ 
   }
 
   .hero-main {
     display: block;
     max-width: 1200px;
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
+   margin-top: -250px;
   }
 
   .hero-content {
@@ -110,9 +112,11 @@
     margin: 0 auto;
     text-align: center;
     padding-left: 0;
-    margin-top: 120px;
+    /* margin-top: 120px; */
   }
-  
+  .hero.title{
+    margin-top: 0;
+  }
 
   /* Navigation */
   .hamburger {
