@@ -39,17 +39,6 @@
   animation-delay: 0.5s;
 }
 
-/* @keyframes gentlePulse {
-  0%,
-  100% {
-    transform: scale(1);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  }
-  50% {
-    transform: scale(1.01);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
-  }
-} */
 
 @keyframes slideInUp {
   from {
@@ -140,16 +129,6 @@
     transform: rotate(360deg);
   }
 }
-
-/* @keyframes shimmer {
-  0%,
-  100% {
-    transform: translateX(-100%) translateY(-100%) rotate(0deg);
-  }
-  50% {
-    transform: translateX(100%) translateY(100%) rotate(180deg);
-  }
-} */
 
 @keyframes gentlePulse {
   0%, 100% {
@@ -257,5 +236,16 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% { 
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  50% { 
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
   }
 }
