@@ -147,6 +147,7 @@ body {
   );
   -webkit-background-clip: text;
   background-clip: text;
+
   -webkit-text-fill-color: transparent;
   font-size: clamp(2.3rem, 3vw, 2.2rem);
 }
@@ -3926,4 +3927,19 @@ input:checked + .toggle-slider:before {
   color: transparent;
   font-size: clamp(2.3rem, 3vw, 2.2rem);
   text-shadow: 0 2px 8px rgba(46, 125, 50, 0.15);
+}
+/* ========================================
+   SOLO H2 EN MODO OSCURO DEL SISTEMA
+   ======================================== */
+@media (prefers-color-scheme: dark) {
+  h2,
+  .section-header h2,
+  .gradient-text {
+    background: linear-gradient(90deg, #c8ffb0 0%, #ffa7e3 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: brightness(1.3);
+    text-shadow: none;
+  }
 }
