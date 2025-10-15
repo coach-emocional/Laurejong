@@ -1194,7 +1194,7 @@
   .video-carousel {
     padding: 1rem;
     border-radius: 16px;
-    min-height: 400px;
+    min-height: 350px;
     max-width: 100%;
   }
 
@@ -1813,20 +1813,8 @@
 }
 
 /* ========================================
-   MODO OSCURO (MEJORADO PARA MÓVILES)
+   MODO OSCURO (OPCIONAL)
    ======================================== */
 @media (prefers-color-scheme: dark) {
-  h2,
-  .section-header h2,
-  .gradient-text,
-  .gradient-text-coaching {
-    background: linear-gradient(90deg, #d4ffba 0%, #ffb3e6 100%) !important;
-    -webkit-background-clip: text !important;
-    background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    /* filter: brightness(1.4) contrast(1.2) !important;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3) !important; */
-    font-weight: 600 !important;
-  }
-  
+  /* Puedes agregar estilos para modo oscuro si lo deseas */
 }
