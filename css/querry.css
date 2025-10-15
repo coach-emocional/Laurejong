@@ -1813,8 +1813,73 @@
 }
 
 /* ========================================
-   MODO OSCURO (OPCIONAL)
+   MODO OSCURO - TEXTOS CON GRADIENTE
    ======================================== */
 @media (prefers-color-scheme: dark) {
-  /* Puedes agregar estilos para modo oscuro si lo deseas */
+  /* ✨ Gradientes más brillantes en modo oscuro - TODAS las pantallas */
+  .gradient-text {
+    background: linear-gradient(
+      135deg,
+      #ff6b9d 0%,
+      #c6f991 100%
+    ) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: brightness(1.3) contrast(1.1);
+  }
+
+  .hero-name {
+    background: linear-gradient(
+      135deg,
+      #ff6b9d 0%,
+      #c6f991 100%
+    ) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: brightness(1.3) contrast(1.1);
+  }
+
+  .coaching .gradient-text {
+    background: linear-gradient(
+      135deg,
+      #4fc96b 0%,
+      #ff6b9d 100%
+    ) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: brightness(1.3) contrast(1.1);
+  }
+
+  .gradient-text-coaching {
+    background: linear-gradient(
+      90deg,
+      #4fc96b 0%,
+      #4fc96b 30%,
+      #ff6b9d 100%
+    ) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: brightness(1.3) contrast(1.1);
+  }
+
+  /* Títulos de sección también más visibles */
+  .section-header h2 {
+    filter: brightness(1.2);
+  }
+}
+
+/* ========================================
+   MODO OSCURO SOLO EN MÓVILES (más agresivo)
+   ======================================== */
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  .gradient-text,
+  .hero-name,
+  .coaching .gradient-text,
+  .gradient-text-coaching {
+    filter: brightness(1.5) contrast(1.2) !important;
+  }
 }
