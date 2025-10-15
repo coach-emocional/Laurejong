@@ -1820,11 +1820,13 @@
   .section-header h2,
   .gradient-text,
   .gradient-text-coaching {
-    /* Mantener el degradado para el "color" del texto */
     background: linear-gradient(90deg, #d4ffba 0%, #ffb3e6 100%) !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
+    /* filter: brightness(1.4) contrast(1.2) !important;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3) !important; */
     font-weight: 600 !important;
   }
+  
 }
