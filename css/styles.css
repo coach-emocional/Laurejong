@@ -152,6 +152,17 @@ body {
   font-size: clamp(2.3rem, 3vw, 2.2rem);
 }
 
+.title-text {
+  background:  var(--primary-pink);
+   
+ 
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  font-size: clamp(2.3rem, 3vw, 2.2rem);
+}
+
 /* Gradiente específico para sección coaching */
 .coaching .gradient-text {
   background: linear-gradient(135deg, #2d8f3f, var(--primary-pink));

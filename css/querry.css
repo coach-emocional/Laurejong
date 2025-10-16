@@ -180,9 +180,9 @@
   }
 
   /* ✨ OCULTAR FONDO DE BENEFICIOS EN TABLETS */
-  .benefits-section::before {
+  /* .benefits-section::before {
     display: none;
-  }
+  } */
 
   /* ✨ SECCIÓN BENEFICIOS - Ajustes de texto */
   .benefits-section .section-header h2,
@@ -353,6 +353,7 @@
     width: 80%;
     height: 100vh;
     background: rgba(255, 255, 255, 0.98);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     transition: left 0.4s ease;
     z-index: 999;
@@ -481,7 +482,7 @@
     text-align: center;
   }
 
-  .hero-title .gradient-text {
+  .hero-title .gradient-text .title-text {
     font-size: 0.85em;
     display: block;
     margin-top: 0.5rem;
@@ -609,22 +610,27 @@
   }
 
   /* ✨ OCULTAR FONDO DE BENEFICIOS EN MÓVILES */
-  .benefits-section::before {
+  /* .benefits-section::before {
     display: none;
-  }
+  } */
 
   /* ✨ QUITAR IMAGEN DE FONDO Y PONER COLOR SUTIL */
-  .benefits-section {
+  /* .benefits-section {
     background-image: none !important;
     background-color: rgba(187, 214, 181, 0.08);
-  }
+  } */
+   .benefits-section::before {
+  background-color: rgba(187, 214, 181, 0.15); /* Cambia el último valor (0.15) */
+}
 
   /* ✨ SECCIÓN BENEFICIOS - Ajustes de texto */
   .benefits-section .section-header h2,
   .benefits-section .gradient-text {
     font-size: clamp(1.8rem, 4vw, 2.2rem);
   }
-
+.benefit-description{
+  color: black;
+}
   .benefits-layout {
     flex-direction: column;
     gap: 2rem;
@@ -990,7 +996,7 @@
     padding: 2.5rem 1rem;
   }
 
-  .gradient-text {
+  .gradient-text .title-text{
     font-size: clamp(2rem, 5vw, 2.4rem);
   }
 
@@ -1078,6 +1084,9 @@
     font-size: 0.8em;
     display: block;
     margin-top: 0.5rem;
+  }
+  .title-text{
+    font-size: 1.1rem;
   }
 
   .hero-name {
@@ -1781,12 +1790,14 @@
     text-align: center;
   }
 
-  .hero-title .gradient-text {
+  .hero-title .gradient-text{
     font-size: 0.8em;
     display: block;
     margin-top: 0.5rem;
   }
-
+.title-text{
+  font-size: 0.8rem;
+}
   .hero-content .hero-description {
     text-shadow: none !important;
     text-align: left;
