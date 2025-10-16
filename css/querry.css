@@ -1814,54 +1814,55 @@
 
 
 
-@media (max-width: 768px) and (prefers-color-scheme: dark) {
+/* ============================================
+   MODO OSCURO - Gradientes optimizados
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
   
-  /* H2 y títulos con gradiente - usar color sólido en móvil oscuro */
-  .gradient-text,
-  .coaching .gradient-text,
+  /* Hero Section - De rosa brillante a verde brillante */
+  .gradient-text {
+    background: linear-gradient(
+      135deg,
+      #c33f8f,
+      #2d8f3f
+    ) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+  
+  /* h2 con gradient-text - De rosa brillante a verde brillante */
+  h2.gradient-text {
+    background: linear-gradient(
+      135deg,
+      #c33f8f,
+      #2d8f3f
+    ) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+  
+  /* Gradiente específico para sección coaching - De verde a rosa */
+  .coaching .gradient-text {
+    background: linear-gradient(135deg, #2d8f3f, #c33f8f) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+  
+  /* Gradient text coaching - De verde a rosa */
   .gradient-text-coaching {
-    background: none !important;
-    -webkit-background-clip: unset !important;
-    background-clip: unset !important;
-    -webkit-text-fill-color: unset !important;
-    color: var(--primary-green) !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
-    font-weight: 600 !important;
-  }
-  
-  /* Títulos de sección */
-  .section-title {
-    background: none !important;
-    -webkit-background-clip: unset !important;
-    background-clip: unset !important;
-    -webkit-text-fill-color: unset !important;
-    color: var(--primary-pink) !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
-  }
-  
-  /* Nombre del hero con gradiente */
-  .hero-name {
-    background: none !important;
-    -webkit-background-clip: unset !important;
-    background-clip: unset !important;
-    -webkit-text-fill-color: unset !important;
-    color: var(--primary-pink) !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
-  }
-  
-  /* Mejorar legibilidad general en modo oscuro móvil */
-  .section-description {
-    color: #e5e7eb !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
-  }
-  
-  /* Headers de formulario en modo oscuro */
-  .form-header h3 {
-    background: none !important;
-    -webkit-background-clip: unset !important;
-    background-clip: unset !important;
-    -webkit-text-fill-color: unset !important;
-    color: var(--primary-green) !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+    background: linear-gradient(
+      90deg,
+      #2d8f3f 0%,
+      #2d8f3f 30%,
+      #c33f8f 100%
+    ) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    text-shadow: 0 2px 8px rgba(195, 63, 143, 0.25) !important;
   }
 }
