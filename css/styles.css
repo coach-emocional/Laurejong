@@ -3929,5 +3929,36 @@ input:checked + .toggle-slider:before {
   text-shadow: 0 2px 8px rgba(46, 125, 50, 0.15);
 }
 
+/* ============================================
+   MODO OSCURO MÓVIL con clase JavaScript
+   ============================================ */
 
+body.dark-mode-mobile .gradient-text {
+  background: linear-gradient(135deg, #c33f8f, #2d8f3f) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+body.dark-mode-mobile h2.gradient-text {
+  background: linear-gradient(135deg, #c33f8f, #2d8f3f) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+body.dark-mode-mobile .coaching .gradient-text {
+  background: linear-gradient(135deg, #2d8f3f, #c33f8f) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+body.dark-mode-mobile .gradient-text-coaching {
+  background: linear-gradient(90deg, #2d8f3f 0%, #2d8f3f 30%, #c33f8f 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 2px 8px rgba(195, 63, 143, 0.25) !important;
+}
 

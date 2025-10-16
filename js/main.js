@@ -1202,4 +1202,23 @@ function initInfiniteScroll(tickerId, tickerContentId, { speed = 40 } = {}) {
   ticker.addEventListener('mouseenter', () => { paused = true; });
   ticker.addEventListener('mouseleave', () => { paused = false; });
 }
+// Detectar modo oscuro y agregar clase al body
+function detectarModoOscuro() {
+  const esModoOscuro = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const esMovil = window.innerWidth <= 768;
+  
+  if (esModoOscuro && esMovil) {
+    document.body.classList.add('dark-mode-mobile');
+  } else {
+    document.body.classList.remove('dark-mode-mobile');
+  }
+}
 
+// Ejecutar al cargar
+detectarModoOscuro();
+
+// Detectar cambios en el modo oscuro
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', detectarModoOscuro);
+
+// Detectar cambios en tamaño de ventana
+window.addEventListener('resize', detectarModoOscuro);
