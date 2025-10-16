@@ -1815,10 +1815,11 @@
 
 
 /* ============================================
-   MODO OSCURO - Gradientes optimizados
+   MÓVIL EN MODO OSCURO - Gradientes optimizados
+   Solo se aplica en móviles con dark mode activado
    ============================================ */
 
-@media (prefers-color-scheme: dark) {
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
   
   /* Hero Section - De rosa brillante a verde brillante */
   .gradient-text {
